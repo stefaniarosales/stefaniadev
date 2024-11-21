@@ -1,8 +1,15 @@
+import App from './App.jsx';
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 
-import App from './App.jsx'
+//styles
+import { GlobalStyled } from './components/globalstyled/globalstyled.js'
 
 createRoot(document.getElementById('root')).render(
   <>
-    <App />
+    <GlobalStyled/>
+    <BrowserRouter>
+      <App/>
+    </BrowserRouter>
   </>,
-)
+);
