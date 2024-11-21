@@ -4,10 +4,9 @@ import {
   ContainerStyled,
   ContainerAboutStyled,
   ContainerParrafosStyled,
-  ContainerTitlesStyled,
-  TitleStyled,
+  ContainerHabilidadesStyled,
   ParrafoStyled,
-  BtnContáctameStyled
+  TitleStyled
 } from './aboutstyled'
 
 function About() {
@@ -20,11 +19,11 @@ function About() {
             <ParrafoStyled> Actualmente estoy explorando el mundo del desarrollo web y estoy emocionada por aplicar mis conocimientos para crear interfaces de  usuario intuitivas y visualmente atractivas.</ParrafoStyled>
             <ParrafoStyled> Mi objetivo es convertirme en una desarrolladora frontend completa, capaz  de construir experiencias digitales excepcionales.</ParrafoStyled>
           </ContainerParrafosStyled>
-          <ContainerTitlesStyled>
-            <TitleStyled>Si te interesa mi trabajo, no dudes en echar un vistazo a mis proyectos personales y ponerte en contacto conmigo.</TitleStyled>
-            <BtnContáctameStyled>¡Contáctame!</BtnContáctameStyled>
-            <TitleStyled>¡Estoy emocionada por colaborar contigo!</TitleStyled>
-            </ContainerTitlesStyled>
+          <ContainerHabilidadesStyled>
+            <TitleStyled>HABILIDADES</TitleStyled>
+            
+          </ContainerHabilidadesStyled>
+          
         </ContainerAboutStyled>
       </ContainerStyled>
     </>

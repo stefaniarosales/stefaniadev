@@ -16,7 +16,6 @@ function Navbar() {
         <ContainerLinksStyled>
           <Link to='/'>HOME</Link>
           <Link to='/About'>ABOUT</Link>
-          <Link to='/Languages'>LENGUAJES</Link>
           <Link to='/Projects'>PROJETS</Link>
           <Link to='/Contact'>CONTACT</Link>
         </ContainerLinksStyled>
