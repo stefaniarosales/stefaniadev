@@ -3,11 +3,11 @@ import styled from 'styled-components'
 export const NavbarStyled = styled.nav`
     position: fixed;
     left: 30px;
-    width: 110px;
+    width: 210px;
     height: 100vh;
-    backdrop-filter: blur(3px) saturate(113%);
-    -webkit-backdrop-filter: blur(3px) saturate(113%);
-    background-color: rgba(255, 255, 255, 0.33);
+    backdrop-filter: blur(8px) saturate(180%);
+    -webkit-backdrop-filter: blur(8px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.35);
     z-index: 1; 
     align-items: center;
     display: flex;

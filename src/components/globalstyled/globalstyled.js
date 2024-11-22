@@ -12,7 +12,7 @@ body {
     height: 100vh;
     font-family: 'helvetica', sans-serif;
     color: white;
-    background-color: #292929;
+    background-color: #262626;
     }
     main {
         display:flex;

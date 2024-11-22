@@ -12,7 +12,7 @@ function Start() {
         <TitleStyled>STEFANIA</TitleStyled>
         <AnimatedText/>
       </ContainerNameStyled>
-      <ImgStartStyled src='/img/backgroundStart.jpg'/>
+      <ImgStartStyled src='/img/stefania.jpg'/>
     </ContainerStyled>
   );
 }
