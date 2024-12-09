@@ -7,9 +7,8 @@ export const ContainerStyled = styled.section`
     padding-left: 300px;
 
     @media (max-width: 768px) {
-        flex-direction: column;
-        justify-content: center;
         padding: 0;
+        justify-content: center;
     }
 `
 export const ContainerNameStyled = styled.div`
@@ -27,8 +26,8 @@ export const ContainerNameStyled = styled.div`
     align-items: center;
     justify-content: center;
     @media (max-width: 768px) {
-        top: 500px;
-        right: 100px;
+        top: 600px;
+        right: 50px;
     }
 `
 export const TitleStyled = styled.h1`
@@ -54,6 +53,6 @@ export const ImgStartStyled = styled.img`
     @media (max-width: 768px) {
         width: auto;
         height: auto;
-        padding-top: 300px;
+        padding-top: 0;
     }
 `

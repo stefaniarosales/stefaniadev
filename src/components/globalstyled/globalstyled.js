@@ -15,7 +15,7 @@ body {
     background-color: #262626;
     }
     main {
-        display:flex;
+
         box-sizing: content-box;
     }
     a {
