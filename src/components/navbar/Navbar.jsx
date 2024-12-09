@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link, Outlet, useLocation } from 'react-router-dom'
-
 //styles
 import {
   NavbarStyled,
@@ -8,16 +7,20 @@ import {
   LogoStyled
 } from './navbarstyled'
 
+
 function Navbar() {
+  const location = useLocation()
+  const currentPath = location.pathname
+
   return (
     <>
       <NavbarStyled>
         <LogoStyled src='/img/logo.png'/>
         <ContainerLinksStyled>
-          <Link to='/'>HOME</Link>
-          <Link to='/About'>ABOUT</Link>
-          <Link to='/Projects'>PROJETS</Link>
-          <Link to='/Contact'>CONTACT</Link>
+          <Link to='/'  className={currentPath === '/' ? 'active' : ''}>HOME</Link>
+          <Link to='/About'  className={currentPath === '/About' ? 'active' : ''}>ABOUT</Link>
+          <Link to='/Projects'  className={currentPath === '/Projects' ? 'active' : ''}>PROJETS</Link>
+          <Link to='/Contact'  className={currentPath === '/Contact' ? 'active' : ''}>CONTACT</Link>
         </ContainerLinksStyled>
       </NavbarStyled>
       <Outlet/>
