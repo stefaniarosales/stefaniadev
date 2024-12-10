@@ -10,8 +10,7 @@ export const Container = styled.section`
     justify-content: center;
 
     @media (max-width: 768px) {
-        padding-left: 0;
-        padding-top: 0;
+        padding: 0;
         justify-content: flex-start;
     }
 `
@@ -23,7 +22,6 @@ export const ContainerImgData = styled.div`
 
     @media (max-width: 768px) {
         flex-direction: column;
-        padding: 2rem;
         align-items: center;
         justify-content: center;
     }
@@ -73,6 +71,9 @@ export const Profession = styled.h3`
     font-style: italic;
     color: #959595;
     padding-bottom: 1rem;
+    @media (max-width: 768px) {
+        padding: 0 1rem 1rem ;
+    }
 `
 export const NameLastName = styled.h3`
     font-size: 35px;
@@ -85,6 +86,9 @@ export const ContainerNameLastName = styled.div`
     display: flex;
     gap: 1rem;
     align-items: center;
+    @media (max-width: 768px) {
+        padding: 1rem;
+    }
 `
 export const ContainerData = styled.div`
     display: flex;
@@ -92,6 +96,8 @@ export const ContainerData = styled.div`
     align-items: center;
     @media (max-width: 768px) {
         flex-wrap: wrap;
+        gap: 0;
+        padding: 0 1rem ;
     }
 `
 export const Data = styled.h4`
@@ -124,6 +130,9 @@ export const Line = styled.div`
 
 export const ContainerSummary = styled.div`
     padding: 1rem 0;
+    @media (max-width: 768px) {
+        padding: 1rem;
+    }
 `
 export const Summary = styled.h5`
     margin: 0;
@@ -131,4 +140,5 @@ export const Summary = styled.h5`
     font-weight: lighter;
     font-size: 20px;
     padding-top: 5px;
+   
 `
