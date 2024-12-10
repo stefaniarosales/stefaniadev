@@ -2,13 +2,11 @@ import { createGlobalStyle } from "styled-components"
 
 export const GlobalStyled = createGlobalStyle`
 
-html{
-    overflow-x: hidden;
-}
 
-body {
+html,body {
     margin: 0;
     padding: 0;
+    overflow: hidden;
     height: 100vh;
     font-family: 'helvetica', sans-serif;
     color: white;
