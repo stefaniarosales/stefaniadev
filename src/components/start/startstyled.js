@@ -17,8 +17,8 @@ export const ContainerNameStyled = styled.div`
     -webkit-backdrop-filter: blur(8px) saturate(180%);
     background-color: rgba(255, 255, 255, 0.35);
     position: fixed;
-    width: 600px;
-    height: 250px;
+    width: 80%;
+    height: 25%;
     top: 450px;
     right: 500px;
     padding: 1rem;
@@ -27,16 +27,20 @@ export const ContainerNameStyled = styled.div`
     align-items: center;
     justify-content: center;
     @media (max-width: 768px) {
-        top: 600px;
-        right: 50px;
+        top: 50%;
+        right: 10%;
     }
 `
 export const TitleStyled = styled.h1`
-    font-size: 80px;
+    font-size: 5rem;
     font-weight: bold;
     margin: 0;
     color: #B7B7B7;
     letter-spacing: 3px;
+
+    @media (max-width: 768px) {
+        font-size: 3rem;
+    }
 `
 
 export const SubTitleStyled = styled.h2`
@@ -46,13 +50,14 @@ export const SubTitleStyled = styled.h2`
     color: #B7B7B7;
 `
 
-export const ImgStartStyled = styled.img`
+export const ContainerImg = styled.div`
     width: 50%;
-    height:100%;
-    object-fit: cover;
+    background-image: url(/img/stefania.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     @media (max-width: 768px) {
-        width: 110%;
-        height: auto;
+        width: 100%;
     }
 `
