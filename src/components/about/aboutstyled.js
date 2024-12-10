@@ -1,18 +1,32 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
+    width: 100%;
     height: 100vh;
     padding-left: 300px;
     padding-top: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @media (max-width: 768px) {
+        padding-left: 0;
+        padding-top: 0;
+        justify-content: flex-start;
+    }
 `
 export const ContainerImgData = styled.div`
     width: 100%;
     display: flex;
     gap: 5rem;
     padding: 2rem 0;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        padding: 2rem;
+        align-items: center;
+        justify-content: center;
+    }
 `
 
 export const ContentData = styled.div`
@@ -25,6 +39,12 @@ export const Title = styled.h2`
     letter-spacing: 3px;
     margin: 0;
     color: #B7B7B7;
+
+    @media (max-width: 768px) {
+        padding: 1rem;
+        font-size: 50px;
+        text-align: center;
+    }
 `
 
 export const Img = styled.img`
@@ -35,6 +55,10 @@ export const Img = styled.img`
     -webkit-box-shadow: -10px 10px 0px 4px rgba(190,149,196,1);
     -moz-box-shadow: -10px 10px 0px 4px rgba(190,149,196,1);
     box-shadow: -10px 10px 0px 4px rgba(190,149,196,1);
+    @media (max-width: 768px) {
+        width: 350px;
+        height: 500px;
+    }
 `
 export const Name = styled.h3`
     font-size: 30px;
@@ -66,6 +90,9 @@ export const ContainerData = styled.div`
     display: flex;
     gap: 1rem;
     align-items: center;
+    @media (max-width: 768px) {
+        flex-wrap: wrap;
+    }
 `
 export const Data = styled.h4`
     font-size: 25px;
@@ -75,20 +102,24 @@ export const Data = styled.h4`
 `
 
 export const Answer = styled.p`
- font-size: 20px;
- margin: 0;
- color: #959595;
+    font-size: 20px;
+    margin: 0;
+    color: #959595;
 `
 export const  ContainerLineTitle = styled.div`
-display: flex;
-flex-direction: column;
-padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+    @media (max-width: 768px) {
+        justify-content: center;
+        align-items: center;
+    }
 `
 export const Line = styled.div`
     width: 200px;
     background-color:#B7B7B7;
     padding: 2px;
-    margin-left: 270px;
+    margin-left: 200px;
 `
 
 export const ContainerSummary = styled.div`

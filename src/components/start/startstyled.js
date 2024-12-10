@@ -27,7 +27,8 @@ export const TitleStyled = styled.h1`
     font-size: 7rem;
     font-weight: bold;
     margin: 0;
-    color: #B7B7B7;
+    /* color: #B7B7B7; */
+
     letter-spacing: 3px;
 
     @media (max-width: 768px) {
@@ -39,7 +40,7 @@ export const SubTitleStyled = styled.h2`
     font-weight: lighter;
     font-size: 4rem;
     margin: 0;
-    color: #B7B7B7;
+    /* color: #B7B7B7; */
     @media (max-width: 768px) {
         font-size: 3rem;
     }
