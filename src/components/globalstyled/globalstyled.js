@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components"
 export const GlobalStyled = createGlobalStyle`
 
 html{
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 body {

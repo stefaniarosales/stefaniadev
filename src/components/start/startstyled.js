@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 export const ContainerStyled = styled.section`
+    width: 100%;
     height: 100vh;
     display: flex;
     justify-content: end;
-    padding-left: 300px;
-
+    
+    //tablet
     @media (max-width: 768px) {
         padding: 0;
         justify-content: center;
@@ -46,13 +47,12 @@ export const SubTitleStyled = styled.h2`
 `
 
 export const ImgStartStyled = styled.img`
-    width: 800px;
-    height:100vh;
+    width: 50%;
+    height:100%;
     object-fit: cover;
 
     @media (max-width: 768px) {
-        width: auto;
+        width: 110%;
         height: auto;
-        padding-top: 0;
     }
 `

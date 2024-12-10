@@ -21,19 +21,20 @@ export const NavbarStyled = styled.nav`
         width: 100%;
         padding: 1rem;
         height: auto; 
-        flex-direction: row; 
-        justify-content: space-around; 
+        justify-content: center; /* Centra los elementos en filas múltiples */
+        gap: 1rem; /* Reduce el espacio entre los elementos */
     }
 `
 
 export const LogoStyled = styled.img`
-    width: 40px;
+    width: 30px;
 `
 export const ContainerLinksStyled = styled.div`
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    justify-content: center;
+    gap: 1rem;
     align-items: center;
     padding: 15px;
 
