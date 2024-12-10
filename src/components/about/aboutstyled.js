@@ -64,6 +64,9 @@ export const Name = styled.h3`
     background: linear-gradient(90deg, rgba(190, 149, 196, 1) 0%, rgba(159, 134, 192, 1) 41%, rgba(224, 177, 203,   1) 100%);
     background-clip: text; 
     color: transparent; 
+    @media (max-width: 768px) {
+        font-size: 25px;
+    }
 `
 export const Profession = styled.h3`
     font-size: 25px;
@@ -81,13 +84,16 @@ export const NameLastName = styled.h3`
     background: linear-gradient(90deg, rgba(190, 149, 196, 1) 0%, rgba(159, 134, 192, 1) 41%, rgba(224, 177, 203, 1) 100%);
     background-clip: text; 
     color: transparent;
+    @media (max-width: 768px) {
+        font-size: 25px;
+    }
 `
 export const ContainerNameLastName = styled.div`
     display: flex;
     gap: 1rem;
     align-items: center;
     @media (max-width: 768px) {
-        padding: 1rem;
+        padding: 1rem 1rem 0 1rem ;
     }
 `
 export const ContainerData = styled.div`
