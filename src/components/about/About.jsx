@@ -53,7 +53,6 @@ function About() {
               capacidad para trabajar en equipo, con un enfoque constante en el aprendizaje y el
               crecimiento en entornos dinámicos y colaborativos.</Summary>
             </ContainerSummary>
-            
           </ContentData>
         </ContainerImgData>
         

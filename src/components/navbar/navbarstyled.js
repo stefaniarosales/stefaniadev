@@ -20,9 +20,9 @@ export const NavbarStyled = styled.nav`
         left: auto;
         width: 100%;
         padding: 1rem;
-        height: auto; 
+        height: 100px; 
         justify-content: center; /* Centra los elementos en filas múltiples */
-        gap: 1rem; /* Reduce el espacio entre los elementos */
+        gap: 0.5rem;
     }
 `
 
