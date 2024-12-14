@@ -10,7 +10,7 @@ export const Container = styled.section`
     justify-content: center;
     @media (max-width: 768px) {
         margin-left: 0;
-
+        padding: 0;
     }
 `;
 
@@ -39,16 +39,20 @@ export const ProjectsList = styled.div`
             flex-wrap: nowrap;
             flex-direction: column;
             justify-content: initial;
+            align-items: center;
             width: 100%;
+            overflow-y: hidden;
         }
 `;
 
 export const ProjectItem = styled.div`
+    outline: 1px red solid;
     display: flex;
     flex-direction: column;
     align-items: center;
     @media (max-width: 768px) {
-    max-width: 100%;
+        width: 90%;
+        justify-content: center;
     }
 `;
 
@@ -76,6 +80,9 @@ export const ProjectFrame = styled.iframe`
     width: 80%;
     height: 400px;
     border: none;
+    @media (max-width: 768px) {
+        width: 100%;
+    }
 `;
 
 //detalles btn
@@ -91,6 +98,9 @@ export const MoreInfoButton = styled.button`
     &:hover {
         background-color: rgb(230, 230, 230); // Lighten background on hover
         cursor: pointer; // Indicate interactivity
+    }
+    @media (max-width: 768px) {
+        width: 100%;
     }
 `;
 
