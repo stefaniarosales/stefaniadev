@@ -6,7 +6,16 @@ import Box from '@mui/material/Box';
 import { projects } from '../data/projects';
 //styles
 import { ContainerLineTitle, Title, Line } from '../about/aboutstyled';
-import { Container, ProjectsList, ProjectItem, ProjectFrame, ProjectTitle, MoreInfoButton } from './projectsstyled';
+import { 
+  Container,
+  ProjectsList,
+  ProjectItem,
+  ProjectFrame,
+  ProjectTitle,
+  MoreInfoButton,
+  TechnologiesList,
+  TechnologyIcon
+  } from './projectsstyled';
 
 //style modal
 const modalStyle = {
@@ -45,6 +54,30 @@ function Projects() {
               <p id="modal-description" style={{color: '#b7b7b7'}}>
                 {selectedProject.description}
               </p>
+
+              <h3  style={{color: '#b7b7b7'}}>Tecnologías Utilizadas</h3>
+              <TechnologiesList>
+                {selectedProject.technologies.map((technology) => (
+                  <li key={technology}>
+                    {technology === 'HTML' && (
+                      <TechnologyIcon src="./public/technologies/html.svg" alt="HTML" />
+                    )}
+                    {technology === 'CSS' && (
+                      <TechnologyIcon src="./public/technologies/css.svg" alt="CSS" />
+                    )}
+                    {technology === 'Git' && (
+                      <TechnologyIcon src="./public/technologies/git.svg" alt="Git" />
+                    )}
+                    {technology === 'Javascript' && (
+                      <TechnologyIcon src="./public/technologies/javascript.svg" alt="javascript" />
+                    )}
+                    {technology === 'React' && (
+                      <TechnologyIcon src="./public/technologies/react.svg" alt="react" />
+                    )}
+                  </li>
+                ))}
+              </TechnologiesList>
+
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <a
                   href={selectedProject.url}
@@ -100,10 +133,11 @@ function Projects() {
                   {project.title}
                 </a>
               </ProjectTitle>
-              <MoreInfoButton onClick={() => handleMoreInfo(project)}>
-                Más información
-              </MoreInfoButton>
+              
               <ProjectFrame src={project.url} title={project.title} />
+              <MoreInfoButton onClick={() => handleMoreInfo(project)}>
+              ¿Quieres saber más?
+              </MoreInfoButton>
             </ProjectItem>
           ))}
         </ProjectsList>

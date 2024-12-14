@@ -3,18 +3,18 @@ import styled from "styled-components";
 export const Container = styled.section`
     width: 100%;
     height: 100vh;
-    padding-top: 1rem;
+    padding: 1rem;
     margin-left: 270px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     @media (max-width: 768px) {
-        padding: 0;
+        margin-left: 0;
     }
 `;
 
 export const ProjectsList = styled.div`
-    width: 80%;
+    width: 75%;
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
@@ -35,8 +35,10 @@ export const ProjectsList = styled.div`
         background: #010101;
     }
         @media (max-width: 768px) {
-            padding: 1rem;
-            width: unset;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            width: 100%;
+            overflow-y: none;
         }
 `;
 
@@ -44,8 +46,6 @@ export const ProjectItem = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    outline: 1px solid red;
-    overflow: hidden;
     @media (max-width: 768px) {
     max-width: 100%;
     }
@@ -72,19 +72,40 @@ export const ProjectTitle = styled.h3`
 `;
 
 export const ProjectFrame = styled.iframe`
-    width: 100%;
+    width: 80%;
     height: 400px;
     border: none;
 `;
 
 //detalles btn
 export const MoreInfoButton = styled.button`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    width: 80%;
     margin: 10px;
-    background-color: rgb(240, 240, 240);
     padding: 10px;
     border-radius: 5px;
+    color: black;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid rgba(0, 0, 0, 0.2); // Add a subtle border
+
+    &:hover {
+        background-color: rgb(230, 230, 230); // Lighten background on hover
+        cursor: pointer; // Indicate interactivity
+    }
+`;
+
+
+//tecnologias
+export const TechnologiesList = styled.ul`
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+`;
+
+export const TechnologyIcon = styled.img`
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
 `;
