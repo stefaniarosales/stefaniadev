@@ -2,20 +2,24 @@ import styled from "styled-components";
 
 export const Container = styled.section`
     width: 100%;
+    @media (max-width: 768px) {
+        padding-top: 100px;
+    }
+`;
+
+export const SubContainer = styled.div`
+    padding-left: 270px;
     height: 100vh;
-    padding: 1rem;
-    margin-left: 270px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     @media (max-width: 768px) {
-        margin-left: 0;
         padding: 0;
     }
-`;
+`
 
 export const ProjectsList = styled.div`
-    width: 75%;
+    width: 85%;
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
@@ -45,7 +49,6 @@ export const ProjectsList = styled.div`
 `;
 
 export const ProjectItem = styled.div`
-    outline: 1px red solid;
     display: flex;
     flex-direction: column;
     align-items: center;

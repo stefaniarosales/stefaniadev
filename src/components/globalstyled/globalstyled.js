@@ -11,12 +11,12 @@ html,body {
     font-family: 'helvetica', sans-serif;
     color: white;
     background-color: #262626;
+
     @media (max-width: 768px){
         overflow: auto;
     }
     }
     main {
-
         box-sizing: content-box;
     }
     a {
@@ -24,9 +24,6 @@ html,body {
     }
     li {
     list-style: none;
-    }
-    @media (max-width: 768px){
-        overflow: auto;
     }
 `
 

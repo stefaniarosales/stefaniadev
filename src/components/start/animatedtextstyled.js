@@ -8,8 +8,13 @@ export const Container = styled.div`
   font-size: 2rem;
   letter-spacing: 1px;
 
+  @media (max-width: 768px) {
+        font-size: 1.3rem;
+    }
+
   div {
     display: inline-block;
+
   }
 
   span {

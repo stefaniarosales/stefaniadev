@@ -16,8 +16,8 @@ export const NavbarStyled = styled.nav`
     gap: 6rem;
 
     @media (max-width: 768px) {
-        position: static; 
-        left: auto;
+        left: 0;
+        right: 0;
         width: 100%;
         padding: 1rem;
         height: 100px; 

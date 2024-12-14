@@ -8,6 +8,7 @@ import { projects } from '../data/projects';
 import { ContainerLineTitle, Title, Line } from '../about/aboutstyled';
 import { 
   Container,
+  SubContainer,
   ProjectsList,
   ProjectItem,
   ProjectFrame,
@@ -121,6 +122,7 @@ function Projects() {
         </Box>
       </Modal>
       <Container>
+        <SubContainer>
         <ContainerLineTitle>
           <Title>PROJECTS</Title>
           <Line />
@@ -128,11 +130,11 @@ function Projects() {
         <ProjectsList>
           {projects.map((project, index) => (
             <ProjectItem key={index}>
-              <ProjectTitle>
+              {/* <ProjectTitle>
                 <a href={project.git} target="_blank" rel="noopener noreferrer">
                   {project.title}
                 </a>
-              </ProjectTitle>
+              </ProjectTitle> */}
               
               <ProjectFrame src={project.url} title={project.title} />
               <MoreInfoButton onClick={() => handleMoreInfo(project)}>
@@ -141,6 +143,7 @@ function Projects() {
             </ProjectItem>
           ))}
         </ProjectsList>
+      </SubContainer>
       </Container>
     </>
   );
