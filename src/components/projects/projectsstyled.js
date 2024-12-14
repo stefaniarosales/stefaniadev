@@ -3,10 +3,11 @@ import styled from "styled-components";
 export const Container = styled.section`
     width: 100%;
     height: 100vh;
-    padding-left: 270px;
     padding-top: 1rem;
+    margin-left: 270px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     @media (max-width: 768px) {
         padding: 0;
     }
@@ -16,19 +17,34 @@ export const ProjectsList = styled.div`
     width: 80%;
     display: flex;
     flex-wrap: wrap;
-    gap: 3rem;
+    gap: 2rem;
     justify-content: center;
-    margin-top: 2rem;
-    @media (max-width: 768px) {
-    padding: 1rem;
-    width: unset;
+    overflow-y: auto;
+
+     /* Estilos para Chrome, Edge, Safari */
+    ::-webkit-scrollbar {
+        width: 10px;
     }
+
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+        @media (max-width: 768px) {
+            padding: 1rem;
+            width: unset;
+        }
 `;
 
 export const ProjectItem = styled.div`
-    width: 100%;
-    max-width: 25%;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    outline: 1px solid red;
     overflow: hidden;
     @media (max-width: 768px) {
     max-width: 100%;
@@ -62,32 +78,13 @@ export const ProjectFrame = styled.iframe`
 `;
 
 //detalles btn
-export const MoreInfoButton = styled.div`
-    margin-top: 10px;
+export const MoreInfoButton = styled.button`
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    a {
-        padding: 10px 20px;
-        background-color: #9F86C0;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-        font-weight: bold;
-    }
-    a:hover {
-        background-color: #7A6CA7;
-    }
-`;
-
-export const ModalBox = styled.div`
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: ${(props) => props.theme.colors.background || "white"};
-    border-radius: 8px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    text-align: center;
-    max-width: 500px;
-    width: 100%;
+    margin: 10px;
+    background-color: rgb(240, 240, 240);
+    padding: 10px;
+    border-radius: 5px;
 `;
