@@ -10,6 +10,7 @@ export const Container = styled.section`
     justify-content: center;
     @media (max-width: 768px) {
         margin-left: 0;
+
     }
 `;
 
@@ -37,8 +38,8 @@ export const ProjectsList = styled.div`
         @media (max-width: 768px) {
             flex-wrap: nowrap;
             flex-direction: column;
+            justify-content: initial;
             width: 100%;
-            overflow-y: none;
         }
 `;
 
