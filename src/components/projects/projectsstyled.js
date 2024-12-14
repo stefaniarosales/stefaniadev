@@ -32,7 +32,7 @@ export const ProjectsList = styled.div`
     }
 
     ::-webkit-scrollbar-track {
-        background: #f1f1f1;
+        background: #010101;
     }
         @media (max-width: 768px) {
             padding: 1rem;
