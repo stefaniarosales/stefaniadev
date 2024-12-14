@@ -41,7 +41,6 @@ export const ProjectsList = styled.div`
             justify-content: initial;
             align-items: center;
             width: 100%;
-            overflow-y: hidden;
         }
 `;
 
