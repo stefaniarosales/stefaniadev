@@ -19,7 +19,7 @@ export const SubContainer = styled.div`
 `
 
 export const ProjectsList = styled.div`
-    width: 85%;
+    width: 90%;
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
@@ -79,7 +79,7 @@ export const ProjectTitle = styled.h3`
 `;
 
 export const ProjectFrame = styled.iframe`
-    width: 80%;
+    width: 90%;
     height: 400px;
     border: none;
     @media (max-width: 768px) {
@@ -89,7 +89,7 @@ export const ProjectFrame = styled.iframe`
 
 //detalles btn
 export const MoreInfoButton = styled.button`
-    width: 80%;
+    width: 90%;
     margin: 10px;
     padding: 10px;
     border-radius: 5px;
