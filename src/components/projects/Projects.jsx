@@ -75,6 +75,9 @@ function Projects() {
                     {technology === 'React' && (
                       <TechnologyIcon src="./public/technologies/react.svg" alt="react" />
                     )}
+                    {technology === 'styled-components' && (
+                      <TechnologyIcon src="./public/technologies/styled-components.svg" alt="styled-components" />
+                    )}
                   </li>
                 ))}
               </TechnologiesList>
@@ -88,7 +91,7 @@ function Projects() {
                     display: 'flex',
                     alignItems: 'center',
                     textDecoration: 'none',
-                    color: '#1976d2',
+                    color: '#e3deea;',
                     padding: '10px',
                     borderRadius: '5px',
                     backgroundColor: '#f0f0f0',
@@ -96,7 +99,7 @@ function Projects() {
                   }}
                 >
                   <WebAssetIcon fontSize="small" style={{ marginRight: '5px' }} />
-                  Visit Website
+                  Ir a la página
                 </a>
                 <a
                   href={selectedProject.git}
@@ -106,7 +109,8 @@ function Projects() {
                     display: 'flex',
                     alignItems: 'center',
                     textDecoration: 'none',
-                    color: '#1976d2',
+                    color: '#e3deea;',
+                    marginLeft: '10px',
                     padding: '10px',
                     borderRadius: '5px',
                     backgroundColor: '#f0f0f0',
@@ -114,7 +118,7 @@ function Projects() {
                   }}
                 >
                   <GitHubIcon fontSize="small" style={{ marginRight: '5px' }} />
-                  GitHub Repository
+                  Ver código
                 </a>
               </div>
             </>
@@ -130,12 +134,6 @@ function Projects() {
         <ProjectsList>
           {projects.map((project, index) => (
             <ProjectItem key={index}>
-              {/* <ProjectTitle>
-                <a href={project.git} target="_blank" rel="noopener noreferrer">
-                  {project.title}
-                </a>
-              </ProjectTitle> */}
-              
               <ProjectFrame src={project.url} title={project.title} />
               <MoreInfoButton onClick={() => handleMoreInfo(project)}>
               ¿Quieres saber más?

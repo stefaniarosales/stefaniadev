@@ -3,14 +3,14 @@ export const projects = [
       title: "Pottermania",
       url: "https://pottermania.vercel.app/",
       git: "https://github.com/stefaniarosales/pottermania.git",
-      description: "A Harry Potter themed project showcasing magical content.",
+      description: "He desarrollado una aplicación web utilizando React como pilar fundamental. Con React Router DOM, he logrado una navegación fluida entre las diferentes secciones. Para gestionar el estado de la aplicación, he empleado Redux y Redux Toolkit, optimizando el manejo del carrito, menú y otros elementos. Formik y Yup me han asistido en la creación de formularios robustos y bien validados. Styled-components ha sido esencial para darle estilo a la interfaz de usuario, mientras que SweetAlert ha enriquecido la experiencia del usuario con mensajes personalizados. Redux Persist garantiza la persistencia de los datos del usuario, incluso al recargar la página.",
       technologies: ["HTML","CSS","React","styled-components","Git",]
     },
     {
       title: "Marvelmania",
       url: "https://marvel-mania-snowy.vercel.app/",
       git: "https://github.com/stefaniarosales/MarvelMania.git",
-      description: "Explore the Marvel universe with this interactive platform.",
+      description: "He diseñado una landing page intuitiva y fácil de usar, construida con HTML, CSS y JavaScript. El carrito de compras es una de las características principales, permitiendo a los usuarios personalizar sus pedidos con facilidad. Con solo unos clics, pueden agregar productos, modificar cantidades y eliminar elementos. Además, he incluido un menú hamburguesa que se adapta a cualquier tamaño de pantalla, y un formulario de contacto que guía al usuario a través del proceso de envío de mensajes.",
       technologies: ["HTML","CSS","Javascript","Git"]
     },
     {

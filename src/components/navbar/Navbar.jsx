@@ -19,6 +19,7 @@ function Navbar() {
         <ContainerLinksStyled>
           <Link to='/'  className={currentPath === '/' ? 'active' : ''}>HOME</Link>
           <Link to='/About'  className={currentPath === '/About' ? 'active' : ''}>ABOUT</Link>
+          <Link to='/Skills'  className={currentPath === '/Skills' ? 'active' : ''}>SKILLS</Link>
           <Link to='/Projects'  className={currentPath === '/Projects' ? 'active' : ''}>PROJETS</Link>
           <Link to='/Contact'  className={currentPath === '/Contact' ? 'active' : ''}>CONTACT</Link>
         </ContainerLinksStyled>
