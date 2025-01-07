@@ -61,22 +61,22 @@ function Projects() {
                 {selectedProject.technologies.map((technology) => (
                   <li key={technology}>
                     {technology === 'HTML' && (
-                      <TechnologyIcon src="./public/technologies/html.svg" alt="HTML" />
+                      <TechnologyIcon src="./technologies/html.svg" alt="HTML" />
                     )}
                     {technology === 'CSS' && (
-                      <TechnologyIcon src="./public/technologies/css.svg" alt="CSS" />
+                      <TechnologyIcon src="./technologies/css.svg" alt="CSS" />
                     )}
                     {technology === 'Git' && (
-                      <TechnologyIcon src="./public/technologies/git.svg" alt="Git" />
+                      <TechnologyIcon src="./technologies/git.svg" alt="Git" />
                     )}
                     {technology === 'Javascript' && (
-                      <TechnologyIcon src="./public/technologies/javascript.svg" alt="javascript" />
+                      <TechnologyIcon src="./technologies/javascript.svg" alt="javascript" />
                     )}
                     {technology === 'React' && (
-                      <TechnologyIcon src="./public/technologies/react.svg" alt="react" />
+                      <TechnologyIcon src="./technologies/react.svg" alt="react" />
                     )}
                     {technology === 'styled-components' && (
-                      <TechnologyIcon src="./public/technologies/styled-components.svg" alt="styled-components" />
+                      <TechnologyIcon src="./technologies/styled-components.svg" alt="styled-components" />
                     )}
                   </li>
                 ))}

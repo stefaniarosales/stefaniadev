@@ -29,25 +29,25 @@ return (
                     <TitleTechnicalSkills>Habilidades técnicas</TitleTechnicalSkills>
                     <SubContainerTechnicalSkills>
                         <ContainerIllustrationTitle>
-                            <Illustration src='./public/technologies/html.svg' alt='html'/>
+                            <Illustration src='./technologies/html.svg' alt='html'/>
                         </ContainerIllustrationTitle>
                         <ContainerIllustrationTitle>
-                            <Illustration src='./public/technologies/css.svg' alt='css'/>
+                            <Illustration src='./technologies/css.svg' alt='css'/>
                         </ContainerIllustrationTitle>
                         <ContainerIllustrationTitle>
-                            <Illustration src='./public/technologies/javascript.svg' alt='js'/>
+                            <Illustration src='./technologies/javascript.svg' alt='js'/>
                         </ContainerIllustrationTitle>
                         <ContainerIllustrationTitle>
-                            <Illustration src='./public/technologies/styled-components.svg' alt='styled-components'/>
+                            <Illustration src='./technologies/styled-components.svg' alt='styled-components'/>
                         </ContainerIllustrationTitle>
                         <ContainerIllustrationTitle>
-                            <Illustration src='./public/technologies/react.svg' alt='react'/>
+                            <Illustration src='./technologies/react.svg' alt='react'/>
                         </ContainerIllustrationTitle>
                         <ContainerIllustrationTitle>
-                            <Illustration src='./public/technologies/git.svg' alt='git'/>
+                            <Illustration src='./technologies/git.svg' alt='git'/>
                         </ContainerIllustrationTitle>
                         <ContainerIllustrationTitle>
-                            <Illustration src='./public/technologies/github.svg' alt='github'/>
+                            <Illustration src='./technologies/github.svg' alt='github'/>
                         </ContainerIllustrationTitle>
 
 
@@ -58,19 +58,19 @@ return (
                     <TitleSoftSkills>Habilidades blandas</TitleSoftSkills>
                     <SubContainerSoftSkills>
                         <ContainerIllustrationTitle>
-                            <Illustration src='./public/skills/adaptacion.png' alt='adaptacion'/>
+                            <Illustration src='./skills/adaptacion.png' alt='adaptacion'/>
                             <TitleIllustration>ADAPTACIÓN</TitleIllustration>
                         </ContainerIllustrationTitle>
                         <ContainerIllustrationTitle>
-                            <Illustration src='./public/skills/resolucion-de-problemas.png' alt='resolucion-de-problemas'/>
+                            <Illustration src='./skills/resolucion-de-problemas.png' alt='resolucion-de-problemas'/>
                             <TitleIllustration>RESOLUCIÓN DE PROBLEMAS</TitleIllustration>
                         </ContainerIllustrationTitle>
                         <ContainerIllustrationTitle>
-                            <Illustration src='./public/skills/trabajo-en-equipo.png' alt='trabajo-en-equipo'/>
+                            <Illustration src='./skills/trabajo-en-equipo.png' alt='trabajo-en-equipo'/>
                             <TitleIllustration>TRABAJO EN EQUIPO</TitleIllustration>
                         </ContainerIllustrationTitle>
                         <ContainerIllustrationTitle>
-                            <Illustration src='./public/skills/creatividad.png' alt='creatividad'/>
+                            <Illustration src='./skills/creatividad.png' alt='creatividad'/>
                             <TitleIllustration>CREATIVIDAD</TitleIllustration>
                         </ContainerIllustrationTitle>
 
