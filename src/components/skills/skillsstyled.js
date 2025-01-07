@@ -28,12 +28,15 @@ export const TitleTechnicalSkills = styled.h3`
     background-clip: text;
     color: transparent;
     text-align: center;
+    padding: 1rem;
 `
 export const SubContainerTechnicalSkills = styled.div`
     width: 90%;
+    height: auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    flex-wrap: nowrap;
+    overflow-y: auto;
 `
 export const ContainerSoftSkills = styled.div`
     width: 50%;
@@ -57,22 +60,21 @@ export const SubContainerSoftSkills = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    overflow-y: auto;
 `
 export const ContainerIllustrationTitle = styled.div`
-    width: 150px;
-    height: 180px;
+    width: 100px;
+    height: 100px;
     padding: 1rem;
 
 `
 export const Illustration = styled.img`
-    width: 120px;
-    height: 110px;
+    width: 60px;
+    height: 60px;
     padding: 1rem;
     background-color:rgb(59, 58, 58);
 `
 export const TitleIllustration = styled.h4`
-    font-size: 11px;
+    font-size: 10px;
     font-weight: lighter;
     margin: 0;
     color: #959595;
