@@ -131,9 +131,7 @@ function Projects() {
         <SubContainer>
         <ContainerLineTitle>
           <LetterComponent top='-40px'>P</LetterComponent>
-          <Title>PROJECTS
-            
-          </Title>
+          <Title>PROJECTS</Title>
           <Line />
         </ContainerLineTitle>
         <ProjectsList>

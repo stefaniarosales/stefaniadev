@@ -6,10 +6,10 @@ export const Container = styled.section`
     padding-left: 270px;
     display: flex;
     justify-content: center;
-    
+    align-items: center;
+    gap: 7rem;
     //tablet
     @media (max-width: 768px) {
-        
         padding: 0;
         padding-left: 0;
     }
@@ -21,20 +21,6 @@ export const ContainerName = styled.div`
     align-items: center;
     @media (max-width: 768px) {
         width: 100%;
-        height: 100vh;
-        display: block;
-    }
-`
-export const Title = styled.h1`
-    font-size: 7rem;
-    font-weight: bold;
-    margin: 0;
-    /* color: #B7B7B7; */
-
-    letter-spacing: 3px;
-
-    @media (max-width: 768px) {
-        font-size: 5rem;
     }
 `
 
@@ -47,4 +33,7 @@ export const SubTitle = styled.h2`
         font-size: 3rem;
     }
 `
-
+export const Img = styled.img`
+    width: 350px;
+    height: 600px;
+`
