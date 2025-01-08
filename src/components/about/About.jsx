@@ -19,11 +19,14 @@ import {
   Summary
 } from './aboutstyled'
 
+import LetterComponent from '../UI/LetterComponent'
+
 function About() {
   return (
     <>
       <Container>
         <ContainerLineTitle>
+          <LetterComponent>A</LetterComponent>
           <Title>ABOUT ME</Title>
           <Line/>
         </ContainerLineTitle>

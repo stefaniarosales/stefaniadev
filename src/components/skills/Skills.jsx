@@ -12,12 +12,14 @@ import {
     Illustration,
     TitleIllustration
 } from './skillsstyled';
-import { ContainerLineTitle, Line, Title } from '../About/aboutstyled';
+import { ContainerLineTitle, Line, Title } from '../about/aboutstyled';
+import LetterComponent from '../UI/LetterComponent';
 
 function Skills() {
     return (
         <Container>
             <ContainerLineTitle>
+                <LetterComponent>S</LetterComponent>
                 <Title>SKILLS</Title>
                 <Line />
             </ContainerLineTitle>

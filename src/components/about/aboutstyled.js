@@ -36,6 +36,7 @@ export const ContentData = styled.div`
 
 //container línea y título about 
 export const  ContainerLineTitle = styled.div`
+    position: relative;
     display: flex;
     flex-direction: column;
     padding: 2rem 0;

@@ -18,6 +18,8 @@ import {
   TechnologyIcon
   } from './projectsstyled';
 
+import LetterComponent from '../UI/LetterComponent';
+
 //style modal
 const modalStyle = {
   position: 'absolute',
@@ -128,7 +130,10 @@ function Projects() {
       <Container>
         <SubContainer>
         <ContainerLineTitle>
-          <Title>PROJECTS</Title>
+          <LetterComponent top='-40px'>P</LetterComponent>
+          <Title>PROJECTS
+            
+          </Title>
           <Line />
         </ContainerLineTitle>
         <ProjectsList>

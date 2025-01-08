@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Container } from "./animatedtextstyled";
 
+
 const AnimatedText = () => {
   const text = "DEVELOPER FRONTEND";
 

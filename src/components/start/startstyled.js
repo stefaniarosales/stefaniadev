@@ -1,29 +1,31 @@
 import styled from "styled-components";
 
-export const ContainerStyled = styled.section`
+export const Container = styled.section`
     width: 100%;
     height: 100vh;
+    padding-left: 270px;
     display: flex;
-    justify-content: end;
+    justify-content: center;
     
     //tablet
     @media (max-width: 768px) {
+        
         padding: 0;
-        justify-content: center;
+        padding-left: 0;
     }
 `
-export const ContainerNameStyled = styled.div`
-    backdrop-filter: blur(8px) saturate(180%);
-    -webkit-backdrop-filter: blur(8px) saturate(180%);
-    background-color: rgba(255, 255, 255, 0.35);
-    width: 100%;
-    height: 100%;
+export const ContainerName = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    @media (max-width: 768px) {
+        width: 100%;
+        height: 100vh;
+        display: block;
+    }
 `
-export const TitleStyled = styled.h1`
+export const Title = styled.h1`
     font-size: 7rem;
     font-weight: bold;
     margin: 0;
@@ -36,7 +38,7 @@ export const TitleStyled = styled.h1`
     }
 `
 
-export const SubTitleStyled = styled.h2`
+export const SubTitle = styled.h2`
     font-weight: lighter;
     font-size: 4rem;
     margin: 0;
@@ -46,18 +48,3 @@ export const SubTitleStyled = styled.h2`
     }
 `
 
-export const ContainerImg = styled.div`
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center;
-    background-image: url(/img/stefania.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    @media (max-width: 768px) {
-        width: 100%;
-    }
-`
