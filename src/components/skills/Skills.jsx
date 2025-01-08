@@ -56,8 +56,8 @@ function Skills() {
                             { src: './skills/trabajo-en-equipo.png', title: 'TRABAJO EN EQUIPO' },
                             { src: './skills/creatividad.png', title: 'CREATIVIDAD' }
                         ].map((item, index) => (
-                            <ContainerIllustrationTitle key={index}>
-                                <Illustration src={item.src} alt={item.title} />
+                            <ContainerIllustrationTitle key={index} size="110px" >
+                                <Illustration src={item.src} alt={item.title} sizes="90px" />
                                 <TitleIllustration>{item.title}</TitleIllustration>
                             </ContainerIllustrationTitle>
                         ))}

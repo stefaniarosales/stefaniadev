@@ -33,9 +33,7 @@ export const ContainerTechnicalSkills = styled.div`
 export const TitleTechnicalSkills = styled.h3`
     font-size: 35px;
     margin: 0;
-    background: linear-gradient(90deg, rgba(190, 149, 196, 1) 0%, rgba(159, 134, 192, 1) 41%, rgba(224, 177, 203, 1) 100%);
-    background-clip: text;
-    color: transparent;
+    color: #B7B7B7;
     text-align: center;
     padding: 1rem;
 `;
@@ -60,9 +58,7 @@ export const ContainerSoftSkills = styled.div`
 export const TitleSoftSkills = styled.h3`
     font-size: 35px;
     margin: 0;
-    background: linear-gradient(90deg, rgba(190, 149, 196, 1) 0%, rgba(159, 134, 192, 1) 41%, rgba(224, 177, 203, 1) 100%);
-    background-clip: text;
-    color: transparent;
+    color: #B7B7B7;
     padding: 1rem;
     text-align: center;
 `;
@@ -70,19 +66,20 @@ export const SubContainerSoftSkills = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 10px;
     @media (max-width: 768px) {
         width: 100%;
     }
 `;
 export const ContainerIllustrationTitle = styled.div`
-    width: 100px;
-    height: 100px;
+    width: ${(props) => props.size || '60px'}; 
+    height: ${(props) => props.size || '60px'}; 
     padding: 1rem;
 `;
 export const Illustration = styled.img`
-    width: 60px;
-    height: 60px;
-    padding: 1rem;
+    width: ${(props) => props.sizes || '60px'}; 
+    height: ${(props) => props.sizes || '60px'}; 
+    padding: 0.5rem;
     background-color: rgb(59, 58, 58);
 `;
 export const TitleIllustration = styled.h4`

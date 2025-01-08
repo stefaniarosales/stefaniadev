@@ -12,8 +12,9 @@ const Letter = styled.div`
     @media (max-width: 768px) {
         font-size: ${({ fontSize }) => fontSize || '150px'};
         margin:  ${({margin }) => margin || '0'};
-    }
-`;
+        left: ${({ left }) => left || '150px'};
+        top: ${({ top }) => top || '-50px'};
+    }`;
 
 
 function LetterComponent( {children,top,left,fontSize,margin,color,opacity, position}) {
