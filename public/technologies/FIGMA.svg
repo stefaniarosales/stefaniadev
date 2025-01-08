@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.89 40.33">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ff7262;
+      }
+
+      .cls-2 {
+        fill: #a259ff;
+      }
+
+      .cls-3 {
+        fill: #1abcfe;
+      }
+
+      .cls-4 {
+        fill: #f24e1e;
+      }
+
+      .cls-5 {
+        fill: #0acf83;
+      }
+    </style>
+  </defs>
+  <g id="tecnologias">
+    <g id="Figma">
+      <path class="cls-5" d="M6.72,40.33c3.71,0,6.72-3.01,6.72-6.72v-6.72h-6.72c-3.71,0-6.72,3.01-6.72,6.72s3.01,6.72,6.72,6.72Z"/>
+      <path class="cls-2" d="M0,20.16c0-3.71,3.01-6.72,6.72-6.72h6.72v13.44h-6.72c-3.71,0-6.72-3.01-6.72-6.72Z"/>
+      <path class="cls-4" d="M0,6.72C0,3.01,3.01,0,6.72,0h6.72v13.44h-6.72c-3.71,0-6.72-3.01-6.72-6.72Z"/>
+      <path class="cls-1" d="M13.44,0h6.72c3.71,0,6.72,3.01,6.72,6.72s-3.01,6.72-6.72,6.72h-6.72V0Z"/>
+      <circle class="cls-3" cx="20.16" cy="20.16" r="6.72"/>
+    </g>
+  </g>
+</svg>

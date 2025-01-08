@@ -4,24 +4,32 @@ export const Container = styled.section`
     width: 100%;
     height: 100vh;
     padding-left: 270px;
-    padding-top: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     @media (max-width: 768px) {
-        padding-top: 100px;
+        padding-top: 150px;
+        padding-left: 0;
     }
-`
+`;
 export const ContainerSkills = styled.div`
     width: 80%;
     display: flex;
     gap: 3rem;
-`
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
+`;
 export const ContainerTechnicalSkills = styled.div`
-    width: 50%;
+    width: 60%;
     display: flex;
     flex-direction: column;
-`
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+`;
 export const TitleTechnicalSkills = styled.h3`
     font-size: 35px;
     margin: 0;
@@ -30,22 +38,25 @@ export const TitleTechnicalSkills = styled.h3`
     color: transparent;
     text-align: center;
     padding: 1rem;
-`
+`;
 export const SubContainerTechnicalSkills = styled.div`
-    width: 90%;
-    height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    overflow-y: auto;
-`
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+`;
 export const ContainerSoftSkills = styled.div`
-    width: 50%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2.5rem;
-`
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+`;
 export const TitleSoftSkills = styled.h3`
     font-size: 35px;
     margin: 0;
@@ -54,31 +65,30 @@ export const TitleSoftSkills = styled.h3`
     color: transparent;
     padding: 1rem;
     text-align: center;
-`
+`;
 export const SubContainerSoftSkills = styled.div`
-    width: 90%;
-    height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-`
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+`;
 export const ContainerIllustrationTitle = styled.div`
     width: 100px;
     height: 100px;
     padding: 1rem;
-
-`
+`;
 export const Illustration = styled.img`
     width: 60px;
     height: 60px;
     padding: 1rem;
-    background-color:rgb(59, 58, 58);
-`
+    background-color: rgb(59, 58, 58);
+`;
 export const TitleIllustration = styled.h4`
     font-size: 10px;
     font-weight: lighter;
     margin: 0;
     color: #959595;
     text-align: center;
-
-`
+`;
