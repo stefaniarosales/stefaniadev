@@ -12,7 +12,13 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import {
   Container,
   SubContainer,
-  ContainerData,
+  ContainerDataIcon,
+  SubContainerDataIcon,
+  ContainerLogoData,
+  ContainerLogo,
+  Data,
+  Icon,
+  Logo
 }
 from './contactstyled'
 
@@ -26,9 +32,22 @@ function Contact() {
             <Line />
         </ContainerLineTitle>
         <SubContainer>
-          <ContainerData>
-
-          </ContainerData>
+          <ContainerLogoData>
+            <ContainerLogo>
+              <Logo src='./img/logo.png'/>
+            </ContainerLogo>
+            <SubContainerDataIcon>
+              <ContainerDataIcon>
+                <WhatsAppIcon/>
+                <Data>11 26977559</Data>
+              </ContainerDataIcon>
+              <ContainerDataIcon>
+                <EmailIcon/>
+                <Data>stefaniarosales@live.com</Data>
+                <Data>stefaniarosales0@gmail.com</Data>
+              </ContainerDataIcon>
+            </SubContainerDataIcon>
+          </ContainerLogoData>
           <Form/>
         </SubContainer>
       </Container>

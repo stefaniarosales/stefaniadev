@@ -17,27 +17,57 @@ export const Container = styled.section`
 `
 
 export const SubContainer = styled.div`
+    width: 100%;
     display: flex;
-    gap: 1rem;
-    outline: 1px red solid;
-`
+    justify-content: flex-start;
+    gap: 10rem;
 
-export const ContainerData = styled.div`
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+`
+export const ContainerLogoData = styled.div`
     display: flex;
     flex-direction: column;
-`
-export const Data =styled.div`
-padding: 10px;
-`
-export const Icons = styled.div`
     padding: 10px;
+    gap: 1rem;
+`
+export const ContainerDataIcon = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    /* background-color: rgb(59, 58, 58); */
+`
+export const SubContainerDataIcon = styled.div`
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    padding: 10px;
+    @media (max-width: 768px) {
+        justify-content: center;
+    }
+`
+export const Data =styled.p`
+    font-size: 10px;
+    margin: 5px;
+    padding-top: 10px;
+`
+export const Icon = styled.div`
+    background-color: rgb(59,58,58);
+`
+export const ContainerLogo = styled.div`
+    width: 100%;
+    text-align: center;
+`
+export const Logo = styled.img`
+    width: 100px;
 `
 
 
 //formulario
 export const FormContainer = styled.div`
-    max-width: 400px;
-    margin: 0 auto;
+    max-width: 500px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
