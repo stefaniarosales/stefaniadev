@@ -1,5 +1,7 @@
 import React from 'react'
 
+
+import Form from './Form'
 import { ContainerLineTitle, Title, Line} from '../about/aboutstyled'
 import LetterComponent from '../UI/LetterComponent'
 
@@ -22,6 +24,7 @@ function Contact() {
         <ContainerData>
 
         </ContainerData>
+        <Form/>
       </Container>
     </>
   )
