@@ -19,10 +19,17 @@ export const Container = styled.section`
 export const SubContainer = styled.div`
     display: flex;
     gap: 1rem;
-    
+    outline: 1px red solid;
 `
 
 export const ContainerData = styled.div`
+    display: flex;
+    flex-direction: column;
+`
+export const Data =styled.div`
+padding: 10px;
+`
+export const Icons = styled.div`
     padding: 10px;
 `
 
