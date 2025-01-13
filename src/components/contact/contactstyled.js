@@ -17,7 +17,9 @@ export const Container = styled.section`
 `
 
 export const SubContainer = styled.div`
-    padding: 10px;
+    display: flex;
+    gap: 1rem;
+    
 `
 
 export const ContainerData = styled.div`

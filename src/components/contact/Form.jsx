@@ -84,20 +84,18 @@ function Form() {
                             <ErrorMessage>{formik.errors.email}</ErrorMessage>
                         ) : null} 
                     </div>
-
-                    <div>
-                        <TextArea
-                            name= "message"
-                            placeholder= "Mensaje"
-                            rows= "5"
-                            onChange={formik.handleChange}
-                            onBlur={formik.handleBlur}
-                            value={formik.values.message}
-                        />
-                        {formik.touched.message && formik.errors.message ? (
-                            <ErrorMessage>{formik.errors.message}</ErrorMessage>
-                        ) : null}
-                    </div>
+                    
+                    <TextArea
+                        name= "message"
+                        placeholder= "Mensaje"
+                        rows= "5"
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.message}
+                    />
+                    {formik.touched.message && formik.errors.message ? (
+                        <ErrorMessage>{formik.errors.message}</ErrorMessage>
+                    ) : null}
                     <SubmitButton type='submit'>Enviar</SubmitButton>
                 </StyledForm>
             </FormContainer>

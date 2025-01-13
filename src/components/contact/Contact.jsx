@@ -21,10 +21,12 @@ function Contact() {
             <Title>CONTACT</Title>
             <Line />
         </ContainerLineTitle>
-        <ContainerData>
+        <SubContainer>
+          <ContainerData>
 
-        </ContainerData>
-        <Form/>
+          </ContainerData>
+          <Form/>
+        </SubContainer>
       </Container>
     </>
   )
