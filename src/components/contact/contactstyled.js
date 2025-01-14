@@ -4,42 +4,50 @@ import styled from "styled-components";
 export const Container = styled.section`
     width: 100%;
     height: 100vh;
-    padding-left: 270px;
-    padding-top: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 1rem 1rem 0 3rem;
+    gap: 3rem;
     @media (max-width: 768px) {
-        padding-top: 160px;
-        padding-left: 0;
         justify-content: flex-start;
+        padding: 1rem;
+        align-items: center;
     }
 `
 
 export const SubContainer = styled.div`
     width: 100%;
     display: flex;
-    justify-content: flex-start;
-    gap: 10rem;
-
+    gap: 5rem;
+    padding: 2rem;
     @media (max-width: 768px) {
         flex-direction: column;
+        padding: 0;
+        align-items: center;
+        gap: 3rem;
     }
 `
-export const ContainerLogoData = styled.div`
+export const ContainerDataIcons = styled.div`
+    width: 40%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     padding: 10px;
-    gap: 1rem;
+    gap: 2rem;
 `
-export const ContainerDataIcon = styled.div`
+export const ContainerData = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: center;
-    
-    /* background-color: rgb(59, 58, 58); */
+    gap: 10px;
 `
-export const SubContainerDataIcon = styled.div`
+export const Data = styled.p`
+    color: #b7b7b7;
+    font-size: 20px;
+    font-weight: lighter;
+    margin: 0;
+`
+export const ContainerIconsRedesSociales = styled.div`
     display: flex;
     width: 100%;
     gap: 1rem;
@@ -48,35 +56,38 @@ export const SubContainerDataIcon = styled.div`
         justify-content: center;
     }
 `
-export const Data =styled.p`
-    font-size: 10px;
-    margin: 5px;
-    padding-top: 10px;
-`
-export const Icon = styled.div`
-    background-color: rgb(59,58,58);
+export const ContainerIcon =styled.a`
+    text-decoration: none;
+    display: inline-block;
+    color: #b7b7b7;
+    transition: color 0.3s;
+
+    &:hover {
+        color: #9F86C0;
+    }
 `
 export const ContainerLogo = styled.div`
     width: 100%;
     text-align: center;
 `
 export const Logo = styled.img`
-    width: 100px;
+    width: 50px;
 `
 
 
 //formulario
 export const FormContainer = styled.div`
-    max-width: 500px;
+    width: 60%;
+    max-width: 450px;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #b7b7b7;
     border-radius: 8px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 `;
 
 export const FormTitle = styled.h2`
     text-align: center;
-    color: #333;
+    color: #b7b7b7;
 `;
 
 export const StyledForm = styled.form`
@@ -88,11 +99,10 @@ export const StyledForm = styled.form`
 export const Input = styled.input`
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ccc;
+    border: 1px solid #b7b7b7;
     border-radius: 4px;
-
     &:focus {
-        border-color: #007bff;
+        border-color:rgb(113, 113, 113);
         outline: none;
     }
 `;
@@ -100,7 +110,7 @@ export const Input = styled.input`
 export const TextArea = styled.textarea`
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ccc;
+    border: 1px solid #b7b7b7;
     border-radius: 4px;
     resize: none;
 
@@ -119,12 +129,8 @@ export const SubmitButton = styled.button`
     padding: 10px;
     font-size: 16px;
     color: white;
-    background-color: #007bff;
+    background: linear-gradient(90deg, rgba(190, 149, 196, 1) 0%, rgba(159, 134, 192, 1) 41%, rgba(224, 177, 203, 1) 100%);
     border: none;
     border-radius: 4px;
     cursor: pointer;
-
-    &:hover {
-        background-color: #0056b3;
-    }
 `;

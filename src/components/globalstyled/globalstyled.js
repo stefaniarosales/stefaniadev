@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components"
+import styled from "styled-components"
 
 export const GlobalStyled = createGlobalStyle`
 
@@ -26,4 +27,9 @@ html,body {
     list-style: none;
     }
 `
-
+export const ContainerGeneral = styled.div`
+    display: flex;
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+`

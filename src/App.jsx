@@ -6,21 +6,24 @@ import Projects from "./components/projects/Projects"
 import Contact from "./components/contact/Contact"
 
 import {Routes,Route} from "react-router-dom"
+import { ContainerGeneral } from "./components/globalstyled/globalstyled"
 
 function App() {
 
   return (
     <>
-      <Navbar/>
-      <Routes>
-        <Route path="/" element={<Start/>}/>
-        <Route path="/About" element={<About/>}/>
-        <Route path="/Skills" element={<Skills/>}/>
-        <Route path="/Projects" element={<Projects/>}/>
-        <Route path="/Contact" element={<Contact/>}/>
-        <Route/>
-        <Route/>
-      </Routes>
+      <ContainerGeneral>
+        <Navbar/>
+        <Routes>
+          <Route path="/" element={<Start/>}/>
+          <Route path="/About" element={<About/>}/>
+          <Route path="/Skills" element={<Skills/>}/>
+          <Route path="/Projects" element={<Projects/>}/>
+          <Route path="/Contact" element={<Contact/>}/>
+          <Route/>
+          <Route/>
+        </Routes>
+      </ContainerGeneral>
     </>
   )
 }

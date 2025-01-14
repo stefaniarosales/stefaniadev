@@ -6,19 +6,20 @@ import { ContainerLineTitle, Title, Line} from '../about/aboutstyled'
 import LetterComponent from '../UI/LetterComponent'
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import EmailIcon from '@mui/icons-material/Email';
-import GitHubIcon from '@mui/icons-material/GitHub';
+import { GitHub } from '@mui/icons-material';
+import { Instagram } from '@mui/icons-material';
+import { LinkedIn } from '@mui/icons-material';
+
 
 
 import {
   Container,
   SubContainer,
-  ContainerDataIcon,
-  SubContainerDataIcon,
-  ContainerLogoData,
-  ContainerLogo,
+  ContainerIconsRedesSociales,
+  ContainerData,
   Data,
-  Icon,
-  Logo
+  ContainerDataIcons,
+  ContainerIcon,
 }
 from './contactstyled'
 
@@ -32,22 +33,37 @@ function Contact() {
             <Line />
         </ContainerLineTitle>
         <SubContainer>
-          <ContainerLogoData>
-            <ContainerLogo>
-              <Logo src='./img/logo.png'/>
-            </ContainerLogo>
-            <SubContainerDataIcon>
-              <ContainerDataIcon>
-                <WhatsAppIcon/>
-                <Data>11 26977559</Data>
-              </ContainerDataIcon>
-              <ContainerDataIcon>
-                <EmailIcon/>
-                <Data>stefaniarosales@live.com</Data>
-                <Data>stefaniarosales0@gmail.com</Data>
-              </ContainerDataIcon>
-            </SubContainerDataIcon>
-          </ContainerLogoData>
+          <ContainerDataIcons>
+            <ContainerData>
+              <Data>stefaniarosales@live.com</Data>
+              <Data>+54 11 2697 7959</Data>
+              <Data>Argentina, Buenos Aires</Data>
+            </ContainerData>
+
+            <ContainerIconsRedesSociales>
+                <ContainerIcon
+                  href="https://github.com/stefaniarosales"
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                >
+                  <GitHub style={{ fontSize: '40px' }}/>
+                </ContainerIcon>
+                <ContainerIcon
+                  href="https://www.instagram.com/stefisua/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Instagram style={{ fontSize: '40px' }}/>
+                </ContainerIcon>
+                <ContainerIcon
+                  href="https://www.linkedin.com/in/stefaniarosales/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <LinkedIn style={{ fontSize: '40px' }}/>
+                </ContainerIcon>
+            </ContainerIconsRedesSociales>
+          </ContainerDataIcons>
           <Form/>
         </SubContainer>
       </Container>

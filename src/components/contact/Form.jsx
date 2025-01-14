@@ -55,9 +55,8 @@ function Form() {
     return (
         <>
             <FormContainer>
-                <FormTitle>Contactame</FormTitle>
+                <FormTitle>Contáctame</FormTitle>
                 <StyledForm onSubmit={formik.handleSubmit}>
-                    <div>
                         <Input
                             type= "text"
                             name= "name"
@@ -69,9 +68,7 @@ function Form() {
                         {formik.touched.name && formik.errors.name ? (
                             <ErrorMessage>{formik.errors.name}</ErrorMessage>
                         ): null}
-                    </div>
 
-                    <div>
                         <Input
                             type= "email"
                             name= "email"
@@ -83,7 +80,7 @@ function Form() {
                         {formik.touched.email && formik.errors.email ? (
                             <ErrorMessage>{formik.errors.email}</ErrorMessage>
                         ) : null} 
-                    </div>
+                    
                     
                     <TextArea
                         name= "message"

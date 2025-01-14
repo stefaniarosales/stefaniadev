@@ -1,14 +1,11 @@
 import styled from 'styled-components'
 
 export const NavbarStyled = styled.nav`
-    position: fixed;
-    left: 30px;
-    width: 200px;
+    width: 250px;
     height: 100vh;
     backdrop-filter: blur(8px) saturate(180%);
     -webkit-backdrop-filter: blur(8px) saturate(180%);
     background-color: rgba(255, 255, 255, 0.35);
-    z-index: 1; 
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -21,7 +18,7 @@ export const NavbarStyled = styled.nav`
         width: 100%;
         padding: 1rem;
         height: 100px; 
-        justify-content: center; /* Centra los elementos en filas múltiples */
+        justify-content: center;
         gap: 0.5rem;
     }
 `
