@@ -27,9 +27,9 @@ export const ContainerName = styled.div`
 
 export const SubTitle = styled.h2`
     font-weight: lighter;
-    font-size: 4rem;
+    font-size: 2.5rem;
     margin: 0;
-    /* color: #B7B7B7; */
+    color: #B7B7B7;
     @media (max-width: 768px) {
         font-size: 3rem;
     }
@@ -70,3 +70,11 @@ export const DownloadButton = styled.button`
     font-size: 1rem;
   }
 `;
+
+//SpeechBubble
+export const ContainerSpeechBubble = styled.div`
+  margin-left: 200px;
+  padding: 10px;
+  text-align: center;
+
+`

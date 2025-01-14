@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Container, ContainerName, SubTitle, DownloadButton } from './startstyled';
+import { Container, ContainerName, SubTitle, DownloadButton, ContainerSpeechBubble } from './startstyled';
 import AnimatedText from './AnimatedText';
 import SpeechBubble from './SpeechBubble';
 
@@ -19,12 +19,16 @@ function Start() {
   return (
     <Container>
         <ContainerName>
+          <ContainerSpeechBubble>
           <SpeechBubble
             text="¡Hola!"
             bgColor="#FFD700"
             textColor="#000"
+            angle="25deg" // Cambia este valor para rotar
           />
-          <SubTitle>soy</SubTitle>
+          </ContainerSpeechBubble>
+          
+          <SubTitle>Yo soy</SubTitle>
           <ContainerLineTitle>
             <Title>STEFANIA</Title>
             <Line/>
