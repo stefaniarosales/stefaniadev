@@ -2,17 +2,17 @@ import styled from "styled-components";
 
 export const Container = styled.section`
     width: 100%;
+    padding: 1rem 1rem 0 3rem;
     @media (max-width: 768px) {
-        padding-top: 160px;
     }
 `;
 
 export const SubContainer = styled.div`
-    padding-left: 270px;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 1rem;
     @media (max-width: 768px) {
         padding: 0;
     }

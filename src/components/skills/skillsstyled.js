@@ -3,13 +3,13 @@ import styled from "styled-components";
 export const Container = styled.section`
     width: 100%;
     height: 100vh;
-    padding-left: 270px;
+    padding: 1rem 1rem 0 3rem;
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    flex-direction: column;
     @media (max-width: 768px) {
-        padding-top: 160px;
-        padding-left: 0;
+        padding: 50px 0 0 0;
+        justify-content: flex-start;
     }
 `;
 export const ContainerSkills = styled.div`
@@ -20,6 +20,7 @@ export const ContainerSkills = styled.div`
         flex-direction: column;
         gap: 1rem;
         width: 100%;
+        gap: 1rem;
     }
 `;
 export const ContainerTechnicalSkills = styled.div`

@@ -3,8 +3,7 @@ import styled from "styled-components";
 export const Container = styled.section`
     width: 100%;
     height: 100vh;
-    padding-left: 270px;
-    padding-top: 1rem;
+    padding: 1rem 1rem 0 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,7 +15,7 @@ export const Container = styled.section`
 `
 //imagén y datos personales
 export const ContainerImgData = styled.div`
-    width: 70%;
+    width: 100%;
     display: flex;
     gap: 5rem;
     padding: 2rem 0;

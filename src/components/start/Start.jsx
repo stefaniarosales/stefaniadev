@@ -2,7 +2,7 @@
 import React from 'react';
 import { Container, ContainerName, SubTitle, DownloadButton } from './startstyled';
 import AnimatedText from './AnimatedText';
-import LetterComponent from '../UI/LetterComponent';
+
 
 import { ContainerLineTitle, Line, Title } from '../about/aboutstyled';
 import DownloadIcon from '@mui/icons-material/Download';
@@ -19,7 +19,7 @@ function Start() {
   return (
     <Container>
         <ContainerName>
-          <SubTitle>Hola! soy</SubTitle>
+          <SubTitle>soy</SubTitle>
           <ContainerLineTitle>
             <Title>STEFANIA</Title>
             <Line/>
