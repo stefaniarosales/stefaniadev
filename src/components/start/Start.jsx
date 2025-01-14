@@ -2,7 +2,7 @@
 import React from 'react';
 import { Container, ContainerName, SubTitle, DownloadButton } from './startstyled';
 import AnimatedText from './AnimatedText';
-
+import SpeechBubble from './SpeechBubble';
 
 import { ContainerLineTitle, Line, Title } from '../about/aboutstyled';
 import DownloadIcon from '@mui/icons-material/Download';
@@ -19,6 +19,11 @@ function Start() {
   return (
     <Container>
         <ContainerName>
+          <SpeechBubble
+            text="¡Hola!"
+            bgColor="#FFD700"
+            textColor="#000"
+          />
           <SubTitle>soy</SubTitle>
           <ContainerLineTitle>
             <Title>STEFANIA</Title>
