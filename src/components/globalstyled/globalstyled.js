@@ -16,6 +16,7 @@ html,body {
         @media (max-width: 768px) {
             height: auto; /* Permite que el contenido determine la altura */
             overflow: auto; /* Activa el scroll */
+            overflow-x: hidden;
         }
     }
     main {
