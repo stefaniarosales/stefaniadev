@@ -2,14 +2,12 @@ import styled from "styled-components";
 
 export const Container = styled.section`
     width: 100%;
-    height: 100vh;
     padding: 1rem 1rem 0 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     @media (max-width: 768px) {
         padding: 50px 0 0 0;
-        overflow-y: auto;
         justify-content: flex-start;
     }
 `

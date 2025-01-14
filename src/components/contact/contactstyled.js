@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 export const Container = styled.section`
     width: 100%;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,7 +12,6 @@ export const Container = styled.section`
         justify-content: flex-start;
         padding: 50px 0 0 0;
         align-items: center;
-        overflow-y: auto;
     }
 `
 

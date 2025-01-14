@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.section`
     width: 100%;
-    height: 100vh;
     padding: 1rem 1rem 0 3rem;
     display: flex;
     justify-content: center;
@@ -10,7 +9,6 @@ export const Container = styled.section`
     @media (max-width: 768px) {
         padding: 50px 0 0 0;
         justify-content: flex-start;
-        overflow-y: auto;
     }
 `;
 export const ContainerSkills = styled.div`
