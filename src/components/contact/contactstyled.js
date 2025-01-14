@@ -11,8 +11,9 @@ export const Container = styled.section`
     gap: 3rem;
     @media (max-width: 768px) {
         justify-content: flex-start;
-        padding: 1rem;
+        padding: 50px 0 0 0;
         align-items: center;
+        overflow-y: auto;
     }
 `
 

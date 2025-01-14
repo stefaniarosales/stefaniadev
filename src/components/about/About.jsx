@@ -39,12 +39,6 @@ function About() {
             </ContainerNameLastName>
             <Profession>developer frontend</Profession>
             <ContainerData>
-              <Data>Dirección:</Data><Answer>Argentina, Buenos Aires.</Answer>
-            </ContainerData>
-            <ContainerData>
-              <Data>Mail:</Data><Answer>stefaniarosales@live.com</Answer>
-            </ContainerData>
-            <ContainerData>
               <Data>Intereses:</Data><Answer>Diseño UX/UI, lectura, aprendizaje constante de nuevas tecnologías(actualmente explorando Node.js).</Answer>
             </ContainerData>
             <ContainerSummary>

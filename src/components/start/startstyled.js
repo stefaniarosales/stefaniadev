@@ -11,8 +11,7 @@ export const Container = styled.section`
     gap: 7rem;
     //tablet
     @media (max-width: 768px) {
-        padding: 0;
-        padding-left: 0;
+      padding: 0;
     }
 `
 export const ContainerName = styled.div`

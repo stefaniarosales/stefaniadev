@@ -4,6 +4,8 @@ export const Container = styled.section`
     width: 100%;
     padding: 1rem 1rem 0 3rem;
     @media (max-width: 768px) {
+        padding: 50px 0 0 0;
+        overflow-y: auto;
     }
 `;
 

@@ -10,6 +10,7 @@ export const Container = styled.section`
     @media (max-width: 768px) {
         padding: 50px 0 0 0;
         justify-content: flex-start;
+        overflow-y: auto;
     }
 `;
 export const ContainerSkills = styled.div`
