@@ -7,8 +7,7 @@ export const Container = styled.section`
     justify-content: center;
     align-items: center;
     padding: 1rem 1rem 0 3rem;
-    gap: 7rem;
-    //tablet
+    gap: 4rem;
     @media (max-width: 768px) {
       padding: 50px 0 0 0;
       justify-content: flex-start;
@@ -27,7 +26,7 @@ export const ContainerName = styled.div`
 
 export const SubTitle = styled.h2`
     font-weight: lighter;
-    font-size: 2.5rem;
+    font-size: 1.7rem;
     margin: 0;
     color: #B7B7B7;
     @media (max-width: 768px) {
@@ -41,23 +40,21 @@ export const Img = styled.img`
 
 // Botón cv
 export const DownloadButton = styled.button`
-  margin-top: 20px;
+  width: 25%;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   padding: 10px 20px;
-  font-size: 1.2rem;
   font-weight: bold;
   background: linear-gradient(90deg, rgba(190, 149, 196, 1) 0%, rgba(159, 134, 192, 1) 41%, rgba(224, 177, 203, 1) 100%);
   color:rgb(231, 229, 229);
   border: none;
   border-radius: 25px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition:  0.3s ease, transform 0.2s ease;
 
   &:hover {
-    background-color: #0056b3;
     transform: scale(1.05);
   }
 
@@ -70,7 +67,23 @@ export const DownloadButton = styled.button`
     font-size: 1rem;
   }
 `;
+export const ContainerIconsRedes = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+`
+export const ContainerIconsBtn = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+`
 //SpeechBubble
 export const ContainerSpeechBubble = styled.div`
   margin-left: 200px;

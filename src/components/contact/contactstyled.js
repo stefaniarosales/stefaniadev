@@ -7,7 +7,7 @@ export const Container = styled.section`
     flex-direction: column;
     justify-content: center;
     padding: 1rem 1rem 0 3rem;
-    gap: 3rem;
+    gap: 1rem;
     @media (max-width: 768px) {
         justify-content: flex-start;
         padding: 50px 0 0 0;
@@ -18,13 +18,13 @@ export const Container = styled.section`
 export const SubContainer = styled.div`
     width: 100%;
     display: flex;
-    gap: 5rem;
+    gap: 1rem;
     padding: 2rem;
     @media (max-width: 768px) {
         flex-direction: column;
         padding: 0;
         align-items: center;
-        gap: 3rem;
+        gap: 1rem;
     }
 `
 export const ContainerDataIcons = styled.div`
@@ -59,10 +59,11 @@ export const ContainerIcon =styled.a`
     text-decoration: none;
     display: inline-block;
     color: #b7b7b7;
-    transition: color 0.3s;
+    transition:  0.3s ease, transform 0.2s ease;
 
     &:hover {
         color: #9F86C0;
+        transform: scale(1.05);
     }
 `
 export const ContainerLogo = styled.div`

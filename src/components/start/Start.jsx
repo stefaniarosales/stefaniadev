@@ -1,10 +1,14 @@
 
 import React from 'react';
-import { Container, ContainerName, SubTitle, DownloadButton, ContainerSpeechBubble } from './startstyled';
+import { Container, ContainerName, SubTitle, DownloadButton, ContainerSpeechBubble, ContainerIconsBtn, ContainerIconsRedes } from './startstyled';
 import AnimatedText from './AnimatedText';
 import SpeechBubble from './SpeechBubble';
+import { GitHub } from '@mui/icons-material';
+import { Instagram } from '@mui/icons-material';
+import { LinkedIn } from '@mui/icons-material';
 
 import { ContainerLineTitle, Line, Title } from '../about/aboutstyled';
+import {ContainerIcon} from '../contact/contactstyled'
 import DownloadIcon from '@mui/icons-material/Download';
 
 
@@ -35,9 +39,34 @@ function Start() {
           </ContainerLineTitle>
           <AnimatedText/>
         </ContainerName>
-        <DownloadButton onClick={handleDownload}>
-        <DownloadIcon style={{ marginRight: '8px' }} />Descargar CV
-        </DownloadButton>
+        <ContainerIconsBtn>
+          <DownloadButton onClick={handleDownload}>
+          <DownloadIcon style={{ marginRight: '8px' }} />Descargar CV
+          </DownloadButton>
+          <ContainerIconsRedes>
+          <ContainerIcon
+            href="https://github.com/stefaniarosales"
+            target="_blank" 
+            rel="noopener noreferrer" 
+          >
+            <GitHub style={{ fontSize: '30px' }}/>
+          </ContainerIcon>
+          <ContainerIcon
+            href="https://www.instagram.com/stefisua/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Instagram style={{ fontSize: '30px' }}/>
+          </ContainerIcon>
+          <ContainerIcon
+            href="https://www.linkedin.com/in/stefaniarosales/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <LinkedIn style={{ fontSize: '30px' }}/>
+          </ContainerIcon>
+          </ContainerIconsRedes>
+        </ContainerIconsBtn>
     </Container>
   );
 }

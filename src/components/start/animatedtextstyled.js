@@ -5,7 +5,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   color: #E0B1CB;
-  font-size: 2rem;
+  font-size: 1.1rem;
   letter-spacing: 1px;
 
   @media (max-width: 768px) {

@@ -46,21 +46,21 @@ function Contact() {
                   target="_blank" 
                   rel="noopener noreferrer" 
                 >
-                  <GitHub style={{ fontSize: '40px' }}/>
+                  <GitHub style={{ fontSize: '30px' }}/>
                 </ContainerIcon>
                 <ContainerIcon
                   href="https://www.instagram.com/stefisua/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Instagram style={{ fontSize: '40px' }}/>
+                  <Instagram style={{ fontSize: '30px' }}/>
                 </ContainerIcon>
                 <ContainerIcon
                   href="https://www.linkedin.com/in/stefaniarosales/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <LinkedIn style={{ fontSize: '40px' }}/>
+                  <LinkedIn style={{ fontSize: '30px' }}/>
                 </ContainerIcon>
             </ContainerIconsRedesSociales>
           </ContainerDataIcons>
