@@ -11,7 +11,9 @@ export const Container = styled.section`
     gap: 7rem;
     //tablet
     @media (max-width: 768px) {
-      padding: 0;
+      padding: 50px 0 0 0;
+      justify-content: flex-start;
+      gap: 5rem;
     }
 `
 export const ContainerName = styled.div`
@@ -49,7 +51,7 @@ export const DownloadButton = styled.button`
   font-size: 1.2rem;
   font-weight: bold;
   background: linear-gradient(90deg, rgba(190, 149, 196, 1) 0%, rgba(159, 134, 192, 1) 41%, rgba(224, 177, 203, 1) 100%);
-  color: #fff;
+  color:rgb(231, 229, 229);
   border: none;
   border-radius: 25px;
   cursor: pointer;
@@ -65,7 +67,7 @@ export const DownloadButton = styled.button`
   }
 
   @media (max-width: 768px) {
-    width: 90%;
+    width: 60%;
     font-size: 1rem;
   }
 `;

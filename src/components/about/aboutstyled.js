@@ -36,7 +36,7 @@ export const  ContainerLineTitle = styled.div`
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 2rem 0;
+    padding: 1rem 0;
     @media (max-width: 768px) {
         justify-content: center;
         align-items: center;
@@ -44,14 +44,13 @@ export const  ContainerLineTitle = styled.div`
 `
 //título about
 export const Title = styled.h2`
-    font-size: 70px;
+    font-size: 5rem;
     font-weight: bold;
     letter-spacing: 3px;
     margin: 0;
     color: #B7B7B7;
     @media (max-width: 768px) {
-        padding: 1rem;
-        font-size: 50px;
+        font-size: 4rem;
         text-align: center;
     }
 `

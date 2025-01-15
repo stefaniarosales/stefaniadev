@@ -22,7 +22,7 @@ function Start() {
           <ContainerSpeechBubble>
           <SpeechBubble
             text="¡Hola!"
-            bgColor="#FFD700"
+            bgColor="rgba(224, 177, 203, 1)"
             textColor="#000"
             angle="25deg" // Cambia este valor para rotar
           />
