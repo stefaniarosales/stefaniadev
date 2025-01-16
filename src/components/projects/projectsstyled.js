@@ -1,4 +1,34 @@
-import styled from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+
+
+
+export const ProjectImage = styled.img`
+  width: 100%;
+  height: 350px;
+  border-radius: 10px;
+  object-fit: contain;
+`;
+
+export const StyledSwiper = styled(Swiper)`
+  width: 50%;
+  height: 100%;
+  .swiper-pagination-bullet {
+    background-color: #007bff;
+  }
+`;
+
+export const StyledSwiperSlide = styled(SwiperSlide)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+`;
+
+
+
 
 export const Container = styled.section`
     width: 100%;
@@ -13,30 +43,20 @@ export const Container = styled.section`
 `;
 
 export const SubContainer = styled.div`
+  width: 50%;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  padding: 10px;
 `;
 
 export const ProjectsList = styled.div`
   display: flex;
   align-items: center;
   position: relative;
-  padding: 10px;
+  padding: 20px;
 `;
 
-export const ProjectItem = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-`;
-
-export const ProjectFrame = styled.iframe`
-  width: 95%;
-  height: 400px;
-  border: none;
-`;
 
 export const MoreInfoButton = styled.button`
   margin: 10px;
@@ -49,17 +69,19 @@ export const MoreInfoButton = styled.button`
   }
 `;
 
+// Estilos de los botones
 export const NavigationButton = styled.button`
-  background-color: rgba(90, 90, 90, 0.75);
-  border-radius: 10px;
+  background-color: #007bff;
+  color: white;
   border: none;
-  padding: 10px;
-  font-size: 2rem;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
   cursor: pointer;
-  color: #b7b7b7;
-  &:hover {
-    color:rgb(240, 237, 237);
+  font-size: 16px;
 
+  &:hover {
+    background-color: #0056b3;
   }
 `;
 
@@ -78,6 +100,10 @@ export const PaginationDots = styled.div`
     background-color: #333;
   }
 `;
+
+
+
+
 
 export const TechnologiesList = styled.ul`
     list-style: none;

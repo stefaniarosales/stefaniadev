@@ -3,23 +3,29 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import WebAssetIcon from '@mui/icons-material/WebAsset';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
-import { projects } from '../data/projects';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Pagination } from 'swiper/modules';
+
 // styles
-import { 
+import {
   Container,
   SubContainer,
   ProjectsList,
-  ProjectItem,
-  ProjectFrame,
+  ProjectImage,
   MoreInfoButton,
   TechnologiesList,
   TechnologyIcon,
   NavigationButton,
-  PaginationDots
+  PaginationDots,
+  StyledSwiper,
+  StyledSwiperSlide,
 } from './projectsstyled';
 
 import { ContainerLineTitle, Line, Title } from '../about/aboutstyled';
 import LetterComponent from '../UI/LetterComponent';
+import { projects } from '../data/projects';
 
 const modalStyle = {
   position: 'absolute',
@@ -34,17 +40,6 @@ const modalStyle = {
 
 function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length);
-  };
-
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? projects.length - 1 : prevIndex - 1
-    );
-  };
 
   const handleMoreInfo = (project) => {
     setSelectedProject(project);
@@ -113,40 +108,28 @@ function Projects() {
         </Box>
       </Modal>
       <Container>
-      <ContainerLineTitle>
-        <LetterComponent top='-70px'>P</LetterComponent>
-    <Title>
-        {"PROJECTS".split("").map((letter, index) => (
-            <span key={index} style={{ "--index": index }}>{letter}</span>
-        ))}
-    </Title>
-    <Line />
-</ContainerLineTitle>
-
-        <SubContainer>
-          <ProjectsList>
-            <NavigationButton onClick={handlePrev}>&lt;</NavigationButton>
-            <ProjectItem>
-              <ProjectFrame
-                src={projects[currentIndex].url}
-                title={projects[currentIndex].title}
-              />
-              <MoreInfoButton
-                onClick={() => handleMoreInfo(projects[currentIndex])}
-              >
-                ¿Quieres saber más?
-              </MoreInfoButton>
-            </ProjectItem>
-            <NavigationButton onClick={handleNext}>&gt;</NavigationButton>
-          </ProjectsList>
-          <PaginationDots>
-            {projects.map((_, index) => (
-              <span
-                key={index}
-                className={index === currentIndex ? 'active' : ''}
-              />
+        <ContainerLineTitle>
+          <LetterComponent top="-70px">P</LetterComponent>
+          <Title>
+            {'PROJECTS'.split('').map((letter, index) => (
+              <span key={index} style={{ '--index': index }}>
+                {letter}
+              </span>
             ))}
-          </PaginationDots>
+          </Title>
+          <Line />
+        </ContainerLineTitle>
+        <SubContainer>
+          <StyledSwiper pagination={{ clickable: true }} modules={[Pagination]}>
+            {projects.map((project, index) => (
+              <StyledSwiperSlide key={index}>
+                <ProjectImage src={project.image} alt={project.title} />
+                <MoreInfoButton onClick={() => handleMoreInfo(project)}>
+                  ¿Quieres saber más?
+                </MoreInfoButton>
+              </StyledSwiperSlide>
+            ))}
+          </StyledSwiper>
         </SubContainer>
       </Container>
     </>

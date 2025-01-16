@@ -28,7 +28,7 @@ export const SubContainer = styled.div`
     }
 `
 export const ContainerDataIcons = styled.div`
-    width: 40%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
