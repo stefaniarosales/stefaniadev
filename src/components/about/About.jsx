@@ -25,12 +25,15 @@ function About() {
   return (
     <>
       <Container>
-        <ContainerLineTitle>
-          <LetterComponent>A</LetterComponent>
-          <Title>ABOUT ME</Title>
-          <Line/>
-        </ContainerLineTitle>
-        
+      <ContainerLineTitle>
+        <LetterComponent>A</LetterComponent>
+    <Title>
+        {"ABOUT".split("").map((letter, index) => (
+            <span key={index} style={{ "--index": index }}>{letter}</span>
+        ))}
+    </Title>
+    <Line />
+</ContainerLineTitle>
         <ContainerImgData>
           <Img src='/img/stefania.jpg'/>
           <ContentData>

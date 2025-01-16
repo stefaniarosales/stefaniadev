@@ -22,10 +22,15 @@ function Skills() {
     return (
         <Container>
             <ContainerLineTitle>
-                <LetterComponent>S</LetterComponent>
-                <Title>SKILLS</Title>
-                <Line />
-            </ContainerLineTitle>
+            <LetterComponent >S</LetterComponent>
+            <Title>
+                {"SKILLS".split("").map((letter, index) => (
+                    <span key={index} style={{ "--index": index }}>{letter}</span>
+                ))}
+            </Title>
+            <Line />
+        </ContainerLineTitle>
+
             <ContainerSkills>
             <ContainerTechnicalSkills>
     <TitleTechnicalSkills>Habilidades técnicas</TitleTechnicalSkills>

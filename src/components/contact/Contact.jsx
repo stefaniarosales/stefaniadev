@@ -27,11 +27,15 @@ function Contact() {
   return (
     <>
       <Container>
-        <ContainerLineTitle>
-            <LetterComponent top='-40px'>C</LetterComponent>
-            <Title>CONTACT</Title>
-            <Line />
-        </ContainerLineTitle>
+      <ContainerLineTitle>
+        <LetterComponent top='-80px'>C</LetterComponent>
+    <Title>
+        {"CONTACT".split("").map((letter, index) => (
+            <span key={index} style={{ "--index": index }}>{letter}</span>
+        ))}
+    </Title>
+    <Line />
+</ContainerLineTitle>
         <SubContainer>
           <ContainerDataIcons>
             <ContainerData>

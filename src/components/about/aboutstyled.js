@@ -33,7 +33,7 @@ export const ContentData = styled.div`
 `
 
 //container línea y título about 
-export const  ContainerLineTitle = styled.div`
+export const ContainerLineTitle = styled.div`
     position: relative;
     display: flex;
     flex-direction: column;
@@ -42,26 +42,59 @@ export const  ContainerLineTitle = styled.div`
         justify-content: center;
         align-items: center;
     }
-`
-//título about
+`;
+
+//título about con animación
 export const Title = styled.h2`
     font-size: 5rem;
     font-weight: bold;
     letter-spacing: 3px;
     margin: 0;
     color: #B7B7B7;
+    overflow: hidden; // Evita que las letras se muestren antes de la animación
+    white-space: nowrap;
+    display: inline-block; // Necesario para la animación de texto
     @media (max-width: 768px) {
         font-size: 4rem;
         text-align: center;
     }
-`
-//línea decorativa 
+
+    // Animación para las letras
+    span {
+        display: inline-block;
+        opacity: 0;
+        transform: translateX(-50px);
+        animation: slideIn 0.5s forwards;
+        animation-delay: calc(var(--index) * 0.1s);
+    }
+
+    @keyframes slideIn {
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+`;
+
+//línea decorativa con animación
 export const Line = styled.div`
     width: 200px;
-    background-color:#B7B7B7;
+    background-color: #B7B7B7;
     padding: 2px;
     margin-left: 200px;
-`
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideInLine 0.5s forwards;
+    animation-delay: 1s;
+
+    @keyframes slideInLine {
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+`;
+
 
 //imagén
 export const Img = styled.img`

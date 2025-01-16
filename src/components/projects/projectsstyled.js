@@ -1,114 +1,84 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.section`
     width: 100%;
-    padding: 1rem 1rem 0 3rem;
+    padding: 2rem 1rem 0 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     @media (max-width: 768px) {
         padding: 50px 0 0 0;
+        justify-content: flex-start;
     }
 `;
 
 export const SubContainer = styled.div`
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1rem;
-    @media (max-width: 768px) {
-        padding: 0;
-    }
-`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+`;
 
 export const ProjectsList = styled.div`
-    width: 95%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-    overflow-y: auto;
-
-     /* Estilos para Chrome, Edge, Safari */
-    ::-webkit-scrollbar {
-        width: 10px;
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background: #888;
-        border-radius: 10px;
-    }
-
-    ::-webkit-scrollbar-track {
-        background: #010101;
-    }
-        @media (max-width: 768px) {
-            flex-wrap: nowrap;
-            flex-direction: column;
-            justify-content: initial;
-            align-items: center;
-            width: 100%;
-        }
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 10px;
 `;
 
 export const ProjectItem = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    @media (max-width: 768px) {
-        width: 90%;
-        justify-content: center;
-    }
-`;
-
-export const ProjectTitle = styled.h3`
-    font-size: 20px;
-    margin: 0;
-    padding: 10px;
-    text-align: center;
-    color: #333;
-    a{
-        color: #B7B7B7;
-        padding-left: 10px;
-        font-weight: bold;
-    }
-    a:hover{
-        color: #9F86C0;
-    }
-    svg {
-        font-size: medium;
-        padding-right: 5px;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 `;
 
 export const ProjectFrame = styled.iframe`
-    width: 400px;
-    height: 500px;
-    border: none;
-    @media (max-width: 768px) {
-        width: 100%;
-    }
+  width: 95%;
+  height: 400px;
+  border: none;
 `;
 
-//detalles btn
 export const MoreInfoButton = styled.button`
-    width: 100%;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    color: black;
-    background-color: rgb(240, 240, 240);
-    border: 1px solid rgba(0, 0, 0, 0.2); // Add a subtle border
-
-    &:hover {
-        background-color: rgb(230, 230, 230); // Lighten background on hover
-        cursor: pointer; // Indicate interactivity
-    }
-    @media (max-width: 768px) {
-        width: 100%;
-    }
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(240, 240, 240);
+  &:hover {
+    background-color: rgb(230, 230, 230);
+    cursor: pointer;
+  }
 `;
 
+export const NavigationButton = styled.button`
+  background-color: rgba(90, 90, 90, 0.75);
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #b7b7b7;
+  &:hover {
+    color:rgb(240, 237, 237);
 
-//tecnologias
+  }
+`;
+
+export const PaginationDots = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  span {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    
+  }
+  .active {
+    background-color: #333;
+  }
+`;
+
 export const TechnologiesList = styled.ul`
     list-style: none;
     padding: 0;
