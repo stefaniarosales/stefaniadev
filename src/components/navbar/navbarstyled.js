@@ -35,7 +35,7 @@ export const ContainerLinksStyled = styled.div`
         position: relative;
         color: #b7b7b7;
         text-decoration: none;
-        font-size: 1rem;
+        font-size: 13px;
 
         &::after {
             content: '';

@@ -31,7 +31,7 @@ export const ContainerTechnicalSkills = styled.div`
     }
 `;
 export const TitleTechnicalSkills = styled.h3`
-    font-size: 35px;
+    font-size: 25px;
     margin: 0;
     color: #B7B7B7;
     text-align: center;
@@ -41,6 +41,7 @@ export const SubContainerTechnicalSkills = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 1rem;
     @media (max-width: 768px) {
         width: 100%;
     }
@@ -56,7 +57,7 @@ export const ContainerSoftSkills = styled.div`
     }
 `;
 export const TitleSoftSkills = styled.h3`
-    font-size: 35px;
+    font-size: 25px;
     margin: 0;
     color: #B7B7B7;
     padding: 1rem;
@@ -89,3 +90,55 @@ export const TitleIllustration = styled.h4`
     color: #959595;
     text-align: center;
 `;
+
+
+export const SoftSkillItem = styled.div`
+    background-color:rgba(90, 90, 90, 0.75);
+    color: #b7b7b7;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: default;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+        font-size: 14px;
+    }
+`;
+
+
+export const TechnicalSkillItem = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:rgba(90, 90, 90, 0.75);
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: default;
+    width: 70px; /* Tamaño uniforme */
+    text-align: center;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+        width: 100px;
+    }
+`;
+
+export const TechnicalSkillImage = styled.img`
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+`;
+

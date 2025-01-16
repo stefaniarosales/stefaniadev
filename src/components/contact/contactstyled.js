@@ -34,6 +34,9 @@ export const ContainerDataIcons = styled.div`
     justify-content: center;
     padding: 10px;
     gap: 2rem;
+    @media (max-width: 768px) {
+        align-items: center;
+    }
 `
 export const ContainerData = styled.div`
     display: flex;
@@ -42,7 +45,7 @@ export const ContainerData = styled.div`
 `
 export const Data = styled.p`
     color: #b7b7b7;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: lighter;
     margin: 0;
 `
@@ -66,13 +69,6 @@ export const ContainerIcon =styled.a`
         transform: scale(1.05);
     }
 `
-export const ContainerLogo = styled.div`
-    width: 100%;
-    text-align: center;
-`
-export const Logo = styled.img`
-    width: 50px;
-`
 
 
 //formulario
@@ -86,6 +82,7 @@ export const FormContainer = styled.div`
 `;
 
 export const FormTitle = styled.h2`
+    font-size: 20px;
     text-align: center;
     color: #b7b7b7;
 `;
