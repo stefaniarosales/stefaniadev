@@ -12,7 +12,7 @@ import {
   ProjectsList,
   ProjectItem,
   ProjectFrame,
-  ProjectTitle,
+
   MoreInfoButton,
   TechnologiesList,
   TechnologyIcon

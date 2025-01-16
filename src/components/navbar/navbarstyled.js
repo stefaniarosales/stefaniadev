@@ -14,10 +14,9 @@ export const NavbarStyled = styled.nav`
 
     @media (max-width: 768px) {
         width: 100%;
-        padding: 1rem;
         height: 100px; 
         justify-content: center;
-        gap: 0.5rem;
+        gap: 1rem;
     }
 `
 
@@ -31,17 +30,36 @@ export const ContainerLinksStyled = styled.div`
     justify-content: center;
     gap: 1rem;
     align-items: center;
-    padding: 15px;
 
     a {
+        position: relative;
         color: #b7b7b7;
-    }
-    a.active {
-        color: #9F86C0;
-        font-weight: bold;
+        text-decoration: none;
+        font-size: 1rem;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0;
+            height: 1px;
+            background-color: #9F86C0;
+            transition: width 0.3s ease-in-out;
+        }
     }
 
-    @media (max-width: 768px) {
-        flex-direction: row; 
-    }
+        a.active {
+            color: #9F86C0;
+            font-weight: bold;
+
+        &::after {
+            width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            flex-direction: row;
+            padding: 5px 0;
+        }
 `

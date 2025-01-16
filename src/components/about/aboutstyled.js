@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.section`
     width: 100%;
-    padding: 1rem 1rem 0 3rem;
+    padding: 2rem 1rem 0 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,7 +15,8 @@ export const Container = styled.section`
 export const ContainerImgData = styled.div`
     width: 100%;
     display: flex;
-    gap: 5rem;
+    align-items: center;
+    gap: 3rem;
     padding: 2rem 0;
     @media (max-width: 768px) {
         flex-direction: column;
@@ -64,13 +65,13 @@ export const Line = styled.div`
 
 //imagén
 export const Img = styled.img`
-    width: 250px;
-    height: 400px;
+    width: 150px;
+    height: 250px;
     object-fit: cover;
     object-position: center;
     -webkit-box-shadow: -10px 10px 0px 4px rgba(190,149,196,1);
-    -moz-box-shadow: -10px 10px 0px 4px rgba(190,149,196,1);
-    box-shadow: -10px 10px 0px 4px rgba(190,149,196,1);
+    -moz-box-shadow: -5px 10px 0px 4px rgba(190,149,196,1);
+    box-shadow: -8px 8px 0px 4px rgba(190,149,196,1);
     @media (max-width: 768px) {
         width: 350px;
         height: 500px;
@@ -89,7 +90,8 @@ export const Name = styled.h3`
 `
 //profesión
 export const Profession = styled.h3`
-    font-size: 25px;
+    font-size: 20px;
+    font-weight: lighter;
     margin: 0;
     font-style: italic;
     color: #959595;
@@ -109,7 +111,7 @@ export const ContainerNameLastName = styled.div`
 `
 //nombre y apellido
 export const NameLastName = styled.h3`
-    font-size: 35px;
+    font-size: 30px;
     margin: 0;
     background: linear-gradient(90deg, rgba(190, 149, 196, 1) 0%, rgba(159, 134, 192, 1) 41%, rgba(224, 177, 203, 1) 100%);
     background-clip: text; 
@@ -132,7 +134,7 @@ export const ContainerData = styled.div`
 `
 //dirección-mail y intereses.
 export const Data = styled.h4`
-    font-size: 25px;
+    font-size: 16px;
     margin: 0;
     font-style: italic;
     color: #959595;
@@ -140,7 +142,7 @@ export const Data = styled.h4`
 
 //imformación de dirección-mail y intereses.
 export const Answer = styled.p`
-    font-size: 20px;
+    font-size: 16px;
     margin: 0;
     color: #959595;
 `
@@ -158,7 +160,7 @@ export const Summary = styled.h5`
     margin: 0;
     color: #959595;
     font-weight: lighter;
-    font-size: 20px;
+    font-size: 16px;
     padding-top: 5px;
     @media (max-width: 768px) {
     font-size: 18px;
