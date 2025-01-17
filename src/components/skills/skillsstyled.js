@@ -133,7 +133,7 @@ export const TechnicalSkillItem = styled.div`
     }
 
     @media (max-width: 768px) {
-        width: 70px;
+        width: 50px;
     }
 `;
 
