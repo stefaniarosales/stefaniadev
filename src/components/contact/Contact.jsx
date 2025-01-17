@@ -27,15 +27,15 @@ function Contact() {
   return (
     <>
       <Container>
-      <ContainerLineTitle>
-        <LetterComponent top='-60px'>C</LetterComponent>
-    <Title>
-        {"CONTACT".split("").map((letter, index) => (
-            <span key={index} style={{ "--index": index }}>{letter}</span>
-        ))}
-    </Title>
-    <Line />
-</ContainerLineTitle>
+        <ContainerLineTitle>
+          <LetterComponent top='-60px'>C</LetterComponent>
+          <Title>
+            {"CONTACT".split("").map((letter, index) => (
+              <span key={index} style={{ "--index": index }}>{letter}</span>
+            ))}
+          </Title>
+          <Line />
+        </ContainerLineTitle>
         <SubContainer>
           <ContainerDataIcons>
             <ContainerData>
@@ -43,7 +43,6 @@ function Contact() {
               <Data>+54 11 2697 7959</Data>
               <Data>Argentina, Buenos Aires</Data>
             </ContainerData>
-
             <ContainerIconsRedesSociales>
                 <ContainerIcon
                   href="https://github.com/stefaniarosales"

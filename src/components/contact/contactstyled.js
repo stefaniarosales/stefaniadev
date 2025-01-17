@@ -33,7 +33,7 @@ export const ContainerDataIcons = styled.div`
     flex-direction: column;
     justify-content: center;
     padding: 10px;
-    gap: 2rem;
+    gap: 1rem;
     @media (max-width: 768px) {
         align-items: center;
     }
@@ -52,7 +52,7 @@ export const Data = styled.p`
 export const ContainerIconsRedesSociales = styled.div`
     display: flex;
     width: 100%;
-    gap: 1rem;
+    gap: 0.5rem;
     padding: 10px;
     @media (max-width: 768px) {
         justify-content: center;
