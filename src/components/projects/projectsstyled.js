@@ -38,11 +38,12 @@ export const Container = styled.section`
     @media (max-width: 768px) {
         padding: 50px 0 0 0;
         justify-content: flex-start;
+        align-items: center;
     }
 `;
 
 export const SubContainer = styled.div`
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;

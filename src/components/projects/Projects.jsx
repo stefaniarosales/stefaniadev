@@ -28,26 +28,31 @@ const modalStyle = {
   textAlign: 'center',
 };
 
-// Configuración de Slick
-const settings = {
-  dots: true,
-  infinite: true,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  adaptiveHeight: true,
-  centerMode: true, // Centra los elementos activos
-  centerPadding: "0px", // Elimina el relleno alrededor
-};
+
+
 
 function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [ activeIndex, setActiveIndex ] = useState(0);
 
   const handleMoreInfo = (project) => {
-    setSelectedProject(project);
+    setSelectedProject(projects[activeIndex]);
   };
 
   const handleCloseModal = () => {
     setSelectedProject(null);
+  };
+
+  // Configuración de Slick
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    adaptiveHeight: true,
+    centerMode: true, // Centra los elementos activos
+    centerPadding: "0px", // Elimina el relleno alrededor
+    beforeChange: (oldIndex, newIndex) => setActiveIndex(newIndex),
   };
 
   return (
@@ -125,14 +130,14 @@ function Projects() {
             {projects.map((project, index) => (
               <div key={index}>
                 <ProjectImage src={project.image} alt={project.title} />
-                <ContainerMoreInfoButton>
-                <MoreInfoButton onClick={() => handleMoreInfo(project)}>
-                  Ver más
-                </MoreInfoButton>
-                </ContainerMoreInfoButton>
               </div>
             ))}
           </Slider>
+          <ContainerMoreInfoButton>
+                <MoreInfoButton onClick={() => handleMoreInfo(projects[activeIndex])}>
+                  Ver más
+                </MoreInfoButton>
+                </ContainerMoreInfoButton>
           </CarouselContainer>
         </SubContainer>
       </Container>
