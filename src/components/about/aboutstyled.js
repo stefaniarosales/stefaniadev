@@ -161,6 +161,7 @@ export const ContainerData = styled.div`
     display: flex;
     gap: 1rem;
     align-items: center;
+    color: #959595;
     @media (max-width: 768px) {
         flex-wrap: wrap;
         gap: 0;
