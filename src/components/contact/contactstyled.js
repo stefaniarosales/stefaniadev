@@ -138,7 +138,7 @@ export const SubmitButton = styled.button`
   }
 
   @media (max-width: 768px) {
-    width: 50%;
+    width: 100%;
     font-size: 1rem;
   }
 
