@@ -31,6 +31,7 @@
     "react-router-dom": "^6.28.0",
     "react-slick": "^0.30.3",
     "redux-persist": "^6.0.0",
+    "serve": "^14.2.4",
     "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.13",
     "sweetalert2": "^11.14.5",
