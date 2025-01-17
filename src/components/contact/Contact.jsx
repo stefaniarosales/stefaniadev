@@ -28,7 +28,7 @@ function Contact() {
     <>
       <Container>
       <ContainerLineTitle>
-        <LetterComponent top='-80px'>C</LetterComponent>
+        <LetterComponent top='-60px'>C</LetterComponent>
     <Title>
         {"CONTACT".split("").map((letter, index) => (
             <span key={index} style={{ "--index": index }}>{letter}</span>
