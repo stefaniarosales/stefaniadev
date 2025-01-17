@@ -106,8 +106,8 @@ export const Img = styled.img`
     -moz-box-shadow: -5px 10px 0px 4px rgba(190,149,196,1);
     box-shadow: -8px 8px 0px 4px rgba(190,149,196,1);
     @media (max-width: 768px) {
-        width: 350px;
-        height: 500px;
+        width: 150px;
+        height: 250px;
     }
 `
 //nombre
@@ -131,6 +131,7 @@ export const Profession = styled.h3`
     padding-bottom: 1rem;
     @media (max-width: 768px) {
         padding: 0 1rem 1rem ;
+        text-align: center;
     }
 `
 //contenedor de nombre y apellido
@@ -140,6 +141,7 @@ export const ContainerNameLastName = styled.div`
     align-items: center;
     @media (max-width: 768px) {
         padding: 1rem 1rem 0 1rem ;
+        justify-content: center;
     }
 `
 //nombre y apellido
@@ -162,7 +164,9 @@ export const ContainerData = styled.div`
     @media (max-width: 768px) {
         flex-wrap: wrap;
         gap: 0;
-        padding: 0 1rem ;
+        padding: 0 1rem;
+        text-align: center;
+        justify-content: center;
     }
 `
 //dirección-mail y intereses.
@@ -185,6 +189,7 @@ export const ContainerSummary = styled.div`
     padding: 1rem 0;
     @media (max-width: 768px) {
         padding: 1rem;
+        text-align: center;
     }
 `
 //resumenes
