@@ -145,8 +145,9 @@ export const ButtonModal = styled.a`
   }
 
   @media (max-width: 768px) {
-    width: 50%;
-    font-size: 1rem;
+    width: 40%;
+    font-size: 14px;
+    padding: 5px 5px;
   }
 
 

@@ -33,7 +33,7 @@ const modalStyle = {
   textAlign: 'center',
   width: '60%', // Ancho por defecto
   '@media (max-width: 768px)': {
-    width: '50%', // Ancho en dispositivos móviles
+    width: '70%', // Ancho en dispositivos móviles
     p: 1, // Reduce el padding
     top: '50%',
     left: '50%',

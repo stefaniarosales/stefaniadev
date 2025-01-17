@@ -96,38 +96,50 @@ export const StyledForm = styled.form`
 export const Input = styled.input`
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #b7b7b7;
+    background-color:rgba(183, 183, 183, 0.32);
     border-radius: 4px;
-    &:focus {
-        border-color:rgb(113, 113, 113);
-        outline: none;
-    }
+    border:  none;
 `;
 
 export const TextArea = styled.textarea`
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #b7b7b7;
+    background-color:rgba(183, 183, 183, 0.32);
     border-radius: 4px;
-    resize: none;
-
-    &:focus {
-        border-color: #007bff;
-        outline: none;
-    }
+    border:  none;
 `;
 
 export const ErrorMessage = styled.div`
-    font-size: 14px;
+    font-size: 12px;
     color: red;
 `;
 
 export const SubmitButton = styled.button`
-    padding: 10px;
-    font-size: 16px;
-    color: white;
-    background: linear-gradient(90deg, rgba(190, 149, 196, 1) 0%, rgba(159, 134, 192, 1) 41%, rgba(224, 177, 203, 1) 100%);
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 20px;
+  font-weight: bold;
+  background: linear-gradient(90deg, rgba(190, 149, 196, 1) 0%, rgba(159, 134, 192, 1) 41%, rgba(224, 177, 203, 1) 100%);
+  color:rgb(231, 229, 229);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition:  0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  @media (max-width: 768px) {
+    width: 50%;
+    font-size: 1rem;
+  }
+
 `;
