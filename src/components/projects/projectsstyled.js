@@ -36,8 +36,7 @@ export const Container = styled.section`
     flex-direction: column;
     justify-content: center;
     @media (max-width: 768px) {
-        padding: 50px 0 0 0;
-        justify-content: flex-start;
+        padding: 100px 0 0 0;
         align-items: center;
     }
 `;
