@@ -24,8 +24,15 @@ const modalStyle = {
   transform: 'translate(-50%, -50%)',
   backgroundColor: 'rgb(83, 83, 83)',
   boxShadow: 24,
-  p: 4,
+  p: 2,
   textAlign: 'center',
+  width: '60%', // Ancho por defecto
+  '@media (max-width: 768px)': {
+    width: '50%', // Ancho en dispositivos móviles
+    p: 1, // Reduce el padding
+    top: '50%',
+    left: '50%',
+  },
 };
 
 
@@ -78,15 +85,17 @@ function Projects() {
         <Box sx={modalStyle}>
           {selectedProject && (
             <>
-              <h2 style={{ color: '#b7b7b7' }}>{selectedProject.title}</h2>
-              <p style={{ color: '#b7b7b7' }}>{selectedProject.description}</p>
-              <h3 style={{ color: '#b7b7b7' }}>Tecnologías Utilizadas</h3>
+              <h2 style={{ color: '#b7b7b7', fontSize: '20px' }}>{selectedProject.title}</h2>
+              <p style={{ color: '#b7b7b7', fontSize: '14px', fontWeight: 'lighter' }}>{selectedProject.description}</p>
+              <h3 style={{ color: '#b7b7b7', fontSize: '20px' }}>Tecnologías Utilizadas</h3>
               <TechnologiesList>
                 {selectedProject.technologies.map((technology) => (
                   <li key={technology}>
                     <TechnologyIcon
                       src={`./technologies/${technology.toLowerCase()}.svg`}
                       alt={technology}
+
+
                     />
                   </li>
                 ))}
