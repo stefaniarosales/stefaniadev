@@ -119,3 +119,36 @@ export const TechnologyIcon = styled.img`
     height: 30px;
     margin-right: 5px;
 `;
+
+//btn modal 
+export const ButtonModal = styled.a`
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 20px;
+  font-weight: bold;
+  background: linear-gradient(90deg, rgba(190, 149, 196, 1) 0%, rgba(159, 134, 192, 1) 41%, rgba(224, 177, 203, 1) 100%);
+  color:rgb(231, 229, 229);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition:  0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  @media (max-width: 768px) {
+    width: 50%;
+    font-size: 1rem;
+  }
+
+
+
+`

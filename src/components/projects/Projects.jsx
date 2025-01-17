@@ -3,6 +3,10 @@ import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 import Slider from 'react-slick';
 import { projects } from '../data/projects';
+
+import { GitHub } from '@mui/icons-material';
+import { Web } from '@mui/icons-material';
+
 import {
   Container,
   SubContainer,
@@ -10,6 +14,7 @@ import {
   TechnologyIcon,
   ProjectImage,
   MoreInfoButton,
+  ButtonModal,
   CarouselContainer,
   ContainerMoreInfoButton
 } from './projectsstyled';
@@ -34,8 +39,6 @@ const modalStyle = {
     left: '50%',
   },
 };
-
-
 
 
 function Projects() {
@@ -94,44 +97,27 @@ function Projects() {
                     <TechnologyIcon
                       src={`./technologies/${technology.toLowerCase()}.svg`}
                       alt={technology}
-
-
                     />
                   </li>
                 ))}
               </TechnologiesList>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <a
+              <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+                <ButtonModal
                   href={selectedProject.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{
-                    textDecoration: 'none',
-                    color: '#e3deea',
-                    padding: '10px',
-                    borderRadius: '5px',
-                    backgroundColor: '#f0f0f0',
-                    transition: 'all 0.3s ease-in-out',
-                  }}
                 >
+                  <Web/>
                   Ir a la página
-                </a>
-                <a
+                </ButtonModal>
+                <ButtonModal
                   href={selectedProject.git}
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{
-                    textDecoration: 'none',
-                    color: '#e3deea',
-                    marginLeft: '10px',
-                    padding: '10px',
-                    borderRadius: '5px',
-                    backgroundColor: '#f0f0f0',
-                    transition: 'all 0.3s ease-in-out',
-                  }}
                 >
+                  <GitHub/>
                   Ver código
-                </a>
+                </ButtonModal>
               </div>
             </>
           )}
