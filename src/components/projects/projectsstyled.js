@@ -5,14 +5,14 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 
 export const ProjectImage = styled.img`
-  width: 100%;
-  height: 350px;
+  width: 100% ;
+  height: 100%;
   border-radius: 10px;
-  object-fit: contain;
+  object-fit: cover;
 `;
 
 export const StyledSwiper = styled(Swiper)`
-  width: 50%;
+  width: 100%;
   height: 100%;
   .swiper-pagination-bullet {
     background-color: #007bff;
@@ -25,8 +25,8 @@ export const StyledSwiperSlide = styled(SwiperSlide)`
   align-items: center;
   gap: 1rem;
   padding: 1rem;
+  width: 300px;
 `;
-
 
 
 
@@ -43,12 +43,21 @@ export const Container = styled.section`
 `;
 
 export const SubContainer = styled.div`
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 1rem;
   padding: 10px;
 `;
+
+export const CarouselContainer = styled.div`
+  width: 60%; /* Ajusta el ancho según lo necesites */
+  max-width: 1200px; /* Limita el ancho máximo */
+  margin: 0 auto;
+  padding: 20px 0;
+`;
+
 
 export const ProjectsList = styled.div`
   display: flex;
@@ -68,42 +77,6 @@ export const MoreInfoButton = styled.button`
     cursor: pointer;
   }
 `;
-
-// Estilos de los botones
-export const NavigationButton = styled.button`
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  margin: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-
-  &:hover {
-    background-color: #0056b3;
-  }
-`;
-
-export const PaginationDots = styled.div`
-  display: flex;
-  justify-content: center;
-  gap: 7px;
-  span {
-    width: 10px;
-    height: 10px;
-    background-color: #ccc;
-    border-radius: 50%;
-    
-  }
-  .active {
-    background-color: #333;
-  }
-`;
-
-
-
-
 
 export const TechnologiesList = styled.ul`
     list-style: none;

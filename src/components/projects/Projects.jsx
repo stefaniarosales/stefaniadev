@@ -1,31 +1,20 @@
 import React, { useState } from 'react';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import WebAssetIcon from '@mui/icons-material/WebAsset';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import { Pagination } from 'swiper/modules';
-
-// styles
+import Slider from 'react-slick';
+import { projects } from '../data/projects';
 import {
   Container,
   SubContainer,
-  ProjectsList,
-  ProjectImage,
-  MoreInfoButton,
   TechnologiesList,
   TechnologyIcon,
-  NavigationButton,
-  PaginationDots,
-  StyledSwiper,
-  StyledSwiperSlide,
+  ProjectImage,
+  MoreInfoButton,
+  CarouselContainer 
 } from './projectsstyled';
-
+import LetterComponent from '../UI/LetterComponent'
 import { ContainerLineTitle, Line, Title } from '../about/aboutstyled';
-import LetterComponent from '../UI/LetterComponent';
-import { projects } from '../data/projects';
+
 
 const modalStyle = {
   position: 'absolute',
@@ -36,6 +25,17 @@ const modalStyle = {
   boxShadow: 24,
   p: 4,
   textAlign: 'center',
+};
+
+// Configuración de Slick
+const settings = {
+  dots: true,
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  adaptiveHeight: true,
+  centerMode: true, // Centra los elementos activos
+  centerPadding: "0px", // Elimina el relleno alrededor
 };
 
 function Projects() {
@@ -51,6 +51,7 @@ function Projects() {
 
   return (
     <>
+      {/* Modal para mostrar más información */}
       <Modal open={!!selectedProject} onClose={handleCloseModal}>
         <Box sx={modalStyle}>
           {selectedProject && (
@@ -82,7 +83,6 @@ function Projects() {
                     transition: 'all 0.3s ease-in-out',
                   }}
                 >
-                  <WebAssetIcon fontSize="small" style={{ marginRight: '5px' }} />
                   Ir a la página
                 </a>
                 <a
@@ -99,7 +99,6 @@ function Projects() {
                     transition: 'all 0.3s ease-in-out',
                   }}
                 >
-                  <GitHubIcon fontSize="small" style={{ marginRight: '5px' }} />
                   Ver código
                 </a>
               </div>
@@ -107,29 +106,31 @@ function Projects() {
           )}
         </Box>
       </Modal>
+
+      {/* Carrusel */}
       <Container>
-        <ContainerLineTitle>
-          <LetterComponent top="-70px">P</LetterComponent>
+      <ContainerLineTitle>
+        <LetterComponent>P</LetterComponent>
           <Title>
-            {'PROJECTS'.split('').map((letter, index) => (
-              <span key={index} style={{ '--index': index }}>
-                {letter}
-              </span>
+            {"PROJECTS".split("").map((letter, index) => (
+              <span key={index} style={{ "--index": index }}>{letter}</span>
             ))}
-          </Title>
-          <Line />
-        </ContainerLineTitle>
+        </Title>
+        <Line />
+      </ContainerLineTitle>
         <SubContainer>
-          <StyledSwiper pagination={{ clickable: true }} modules={[Pagination]}>
+          <CarouselContainer>
+          <Slider {...settings}>
             {projects.map((project, index) => (
-              <StyledSwiperSlide key={index}>
+              <div key={index} style={{ textAlign: 'center', marginTop: '10px' }}>
                 <ProjectImage src={project.image} alt={project.title} />
                 <MoreInfoButton onClick={() => handleMoreInfo(project)}>
-                  ¿Quieres saber más?
+                  Ver más
                 </MoreInfoButton>
-              </StyledSwiperSlide>
+              </div>
             ))}
-          </StyledSwiper>
+          </Slider>
+          </CarouselContainer>
         </SubContainer>
       </Container>
     </>
