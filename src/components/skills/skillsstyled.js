@@ -26,6 +26,7 @@ export const ContainerTechnicalSkills = styled.div`
     width: 60%;
     display: flex;
     flex-direction: column;
+    gap: 1rem;
     @media (max-width: 768px) {
         width: 100%;
     }
@@ -51,7 +52,7 @@ export const ContainerSoftSkills = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2.5rem;
+    gap: 1rem;
     @media (max-width: 768px) {
         width: 100%;
     }
@@ -124,7 +125,7 @@ export const TechnicalSkillItem = styled.div`
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     cursor: default;
-    width: 70px; /* Tamaño uniforme */
+    width: 50px; /* Tamaño uniforme */
     text-align: center;
 
     &:hover {
@@ -132,7 +133,7 @@ export const TechnicalSkillItem = styled.div`
     }
 
     @media (max-width: 768px) {
-        width: 100px;
+        width: 70px;
     }
 `;
 
