@@ -10,7 +10,8 @@ import {
   TechnologyIcon,
   ProjectImage,
   MoreInfoButton,
-  CarouselContainer 
+  CarouselContainer,
+  ContainerMoreInfoButton
 } from './projectsstyled';
 import LetterComponent from '../UI/LetterComponent'
 import { ContainerLineTitle, Line, Title } from '../about/aboutstyled';
@@ -18,10 +19,10 @@ import { ContainerLineTitle, Line, Title } from '../about/aboutstyled';
 
 const modalStyle = {
   position: 'absolute',
-  top: '50%',
-  left: '50%',
+  top: '55%',
+  left: '55%',
   transform: 'translate(-50%, -50%)',
-  bgcolor: 'background.paper',
+  backgroundColor: 'rgb(83, 83, 83)',
   boxShadow: 24,
   p: 4,
   textAlign: 'center',
@@ -110,7 +111,7 @@ function Projects() {
       {/* Carrusel */}
       <Container>
       <ContainerLineTitle>
-        <LetterComponent>P</LetterComponent>
+        <LetterComponent top='-60px'>P</LetterComponent>
           <Title>
             {"PROJECTS".split("").map((letter, index) => (
               <span key={index} style={{ "--index": index }}>{letter}</span>
@@ -122,11 +123,13 @@ function Projects() {
           <CarouselContainer>
           <Slider {...settings}>
             {projects.map((project, index) => (
-              <div key={index} style={{ textAlign: 'center', marginTop: '10px' }}>
+              <div key={index}>
                 <ProjectImage src={project.image} alt={project.title} />
+                <ContainerMoreInfoButton>
                 <MoreInfoButton onClick={() => handleMoreInfo(project)}>
                   Ver más
                 </MoreInfoButton>
+                </ContainerMoreInfoButton>
               </div>
             ))}
           </Slider>
