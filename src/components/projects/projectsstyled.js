@@ -14,7 +14,7 @@ export const StyledSwiper = styled(Swiper)`
   width: 100%;
   height: 100%;
   .swiper-pagination-bullet {
-    background-color: #007bff;
+    background-color:rgb(107, 108, 109);
   }
 `;
 
@@ -52,12 +52,12 @@ export const SubContainer = styled.div`
 `;
 
 export const CarouselContainer = styled.div`
-  width: 60%; /* Ajusta el ancho según lo necesites */
+  width: 75%; /* Ajusta el ancho según lo necesites */
   max-width: 1200px; /* Limita el ancho máximo */
   margin: 0 auto;
   padding: 20px 0;
   @media (max-width: 768px) {
-    width: 80%;
+    width: 90%;
   }
 `;
 

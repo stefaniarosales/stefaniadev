@@ -50,6 +50,22 @@ function Projects() {
     slidesToShow: 1,
     slidesToScroll: 1,
     adaptiveHeight: true,
+    appendDots: (dots) => (
+      <div style={{ marginTop: '20px' }}>
+        <ul style={{ margin: '0px', padding: '0px' }}>{dots}</ul>
+      </div>
+    ),
+    customPaging: (i) => (
+      <div
+        style={{
+          width: '5px',
+          height: '5px',
+          background: i === activeIndex ? '#b7b7b7' : '#585858',
+          borderRadius: '50%',
+          margin: '5px',
+        }}
+      ></div>
+    ),
     centerMode: true, // Centra los elementos activos
     centerPadding: "0px", // Elimina el relleno alrededor
     beforeChange: (oldIndex, newIndex) => setActiveIndex(newIndex),
