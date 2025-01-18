@@ -8,7 +8,7 @@ export const Container = styled.section`
     justify-content: center;
     padding: 1rem 1rem 0 3rem;
     gap: 1rem;
-    max-width: 850px;
+    max-width: 800px;
     @media (max-width: 768px) {
         justify-content: flex-start;
         padding: 50px 0 0 0;
@@ -20,7 +20,6 @@ export const SubContainer = styled.div`
     width: 100%;
     display: flex;
     gap: 1rem;
-    padding: 2rem;
     @media (max-width: 768px) {
         flex-direction: column;
         padding: 0;
@@ -75,7 +74,7 @@ export const ContainerIcon =styled.a`
 //formulario
 export const FormContainer = styled.div`
     width: 60%;
-    max-width: 450px;
+    max-width: 350px;
     padding: 20px;
     border: 1px solid #b7b7b7;
     border-radius: 8px;
