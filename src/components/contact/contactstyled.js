@@ -19,7 +19,7 @@ export const Container = styled.section`
 export const SubContainer = styled.div`
     width: 100%;
     display: flex;
-    gap: 1rem;
+    gap: 5rem;
     @media (max-width: 768px) {
         flex-direction: column;
         padding: 0;

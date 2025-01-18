@@ -6,6 +6,7 @@ export const Container = styled.section`
     display: flex;
     justify-content: center;
     flex-direction: column;
+    max-width: 850px;;
     @media (max-width: 768px) {
         padding: 50px 0 0 0;
         justify-content: flex-start;
@@ -48,7 +49,7 @@ export const SubContainerTechnicalSkills = styled.div`
     }
 `;
 export const ContainerSoftSkills = styled.div`
-    width: 40%;
+    width: 55%;
     display: flex;
     flex-direction: column;
     align-items: center;
