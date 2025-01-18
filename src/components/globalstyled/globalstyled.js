@@ -14,7 +14,6 @@ html,body {
     background-color: #262626;
 
         @media (max-width: 768px) {
-            height: auto; /* Permite que el contenido determine la altura */
             overflow: auto; /* Activa el scroll */
             overflow-x: hidden;
         }
