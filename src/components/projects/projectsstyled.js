@@ -2,14 +2,13 @@ import styled from 'styled-components';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 export const ProjectImage = styled.img`
-  width: 100% ;
+  width: 100%;
   height: 100%;
   object-fit: cover;
 `;
 
 export const StyledSwiper = styled(Swiper)`
   width: 100%;
-  height: 100%;
   .swiper-pagination-bullet {
     background-color:rgb(107, 108, 109);
   }
@@ -53,9 +52,9 @@ export const CarouselContainer = styled.div`
   padding: 20px 0;
   @media (max-width: 768px) {
     width: 90%;
+    height: 400px;
   }
 `;
-
 
 export const ProjectsList = styled.div`
   display: flex;
