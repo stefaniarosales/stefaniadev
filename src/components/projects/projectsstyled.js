@@ -85,6 +85,7 @@ export const MoreInfoButton = styled.button`
   justify-content: center;
   gap: 8px;
   padding: 10px 20px;
+  margin: 10px 0;
   font-weight: bold;
   background: linear-gradient(90deg, rgba(190, 149, 196, 1) 0%, rgba(159, 134, 192, 1) 41%, rgba(224, 177, 203, 1) 100%);
   color:rgb(231, 229, 229);
@@ -102,7 +103,7 @@ export const MoreInfoButton = styled.button`
   }
 
   @media (max-width: 768px) {
-    width: 50%;
+    width: 100%;
     font-size: 1rem;
   }
 `;
