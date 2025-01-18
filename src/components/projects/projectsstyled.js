@@ -1,9 +1,6 @@
 import styled, { keyframes, css } from 'styled-components';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-
-
-
 export const ProjectImage = styled.img`
   width: 100% ;
   height: 100%;
@@ -26,8 +23,6 @@ export const StyledSwiperSlide = styled(SwiperSlide)`
   padding: 1rem;
   width: 300px;
 `;
-
-
 
 export const Container = styled.section`
     width: 100%;
@@ -52,7 +47,7 @@ export const SubContainer = styled.div`
 
 export const CarouselContainer = styled.div`
   width: 75%; /* Ajusta el ancho según lo necesites */
-  max-width: 1200px; /* Limita el ancho máximo */
+  max-width: 950px; /* Limita el ancho máximo */
   margin: 0 auto;
   padding: 20px 0;
   @media (max-width: 768px) {
