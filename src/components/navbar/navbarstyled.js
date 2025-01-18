@@ -14,7 +14,7 @@ export const NavbarStyled = styled.nav`
 
     @media (max-width: 768px) {
         width: 100%;
-        height: 100px; 
+        height: 140px; 
         justify-content: center;
         gap: 1rem;
     }
