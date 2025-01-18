@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 import Slider from 'react-slick';
@@ -44,6 +44,7 @@ const modalStyle = {
 function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [ activeIndex, setActiveIndex ] = useState(0);
+  const [ isMobile, setMobile] = useState(window.innerWidth <= 768);
 
   const handleMoreInfo = (project) => {
     setSelectedProject(projects[activeIndex]);
@@ -52,6 +53,15 @@ function Projects() {
   const handleCloseModal = () => {
     setSelectedProject(null);
   };
+
+  useEffect( () => {
+    const handleResize = setMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize",handleResize);
+    }
+  },[]);
+
 
   // Configuración de Slick
   const settings = {
@@ -140,7 +150,7 @@ function Projects() {
           <Slider {...settings}>
             {projects.map((project, index) => (
               <div key={index}>
-                <ProjectImage src={project.image} alt={project.title} />
+                <ProjectImage src={isMobile ? project.mobileImage : project.image} alt={project.title} />
               </div>
             ))}
           </Slider>
