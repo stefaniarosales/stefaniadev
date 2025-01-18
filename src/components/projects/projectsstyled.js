@@ -35,7 +35,7 @@ export const Container = styled.section`
     justify-content: center;
     max-width: 850px;
     @media (max-width: 768px) {
-        padding: 100px 0 0 0;
+        padding: 50px 0 0 0;
         align-items: center;
     }
 `;
@@ -49,7 +49,7 @@ export const SubContainer = styled.div`
   padding: 10px;
   @media (max-width: 768px) {
     width: 90%;
-    height: 400px;
+    height: 100%;
   }
 `;
 
