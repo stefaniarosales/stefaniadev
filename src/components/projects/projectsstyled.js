@@ -37,12 +37,15 @@ export const Container = styled.section`
 `;
 
 export const SubContainer = styled.div`
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
   padding: 10px;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 export const CarouselContainer = styled.div`
