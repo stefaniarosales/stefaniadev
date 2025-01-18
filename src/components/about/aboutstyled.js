@@ -6,6 +6,7 @@ export const Container = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: 800px;
     @media (max-width: 768px) {
         padding: 50px 0 0 0;
         justify-content: flex-start;
