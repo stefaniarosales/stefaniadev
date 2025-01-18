@@ -1,4 +1,4 @@
-import styled, { keyframes, css } from 'styled-components';
+import styled from 'styled-components';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 export const ProjectImage = styled.img`
@@ -30,6 +30,7 @@ export const Container = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: 850px;
     @media (max-width: 768px) {
         padding: 100px 0 0 0;
         align-items: center;
