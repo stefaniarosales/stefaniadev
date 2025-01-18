@@ -8,6 +8,7 @@ export const Container = styled.section`
     justify-content: center;
     padding: 1rem 1rem 0 3rem;
     gap: 1rem;
+    max-width: 850px;
     @media (max-width: 768px) {
         justify-content: flex-start;
         padding: 50px 0 0 0;
