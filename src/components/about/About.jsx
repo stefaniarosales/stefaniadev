@@ -26,7 +26,7 @@ function About() {
     <>
       <Container>
       <ContainerLineTitle>
-        <LetterComponent>A</LetterComponent>
+        <LetterComponent top='-65px'>A</LetterComponent>
     <Title>
         {"ABOUT".split("").map((letter, index) => (
             <span key={index} style={{ "--index": index }}>{letter}</span>
