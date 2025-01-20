@@ -5,12 +5,9 @@ import LetterComponent from '../UI/LetterComponent'
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import EmailIcon from '@mui/icons-material/Email';
 import { LocationOn } from '@mui/icons-material';
-import { Phone } from '@mui/icons-material';
 import { GitHub } from '@mui/icons-material';
 import { Instagram } from '@mui/icons-material';
 import { LinkedIn } from '@mui/icons-material';
-
-
 
 import {
   Container,

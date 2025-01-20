@@ -9,7 +9,7 @@ import {
   ContainerIconsBtn, 
   ContainerIconsRedes
 } from './startstyled';
-
+import LetterComponent from '../UI/LetterComponent';
 import SpeechBubble from './SpeechBubble';
 import { GitHub, Instagram, LinkedIn, Download } from '@mui/icons-material';
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
@@ -57,8 +57,13 @@ function Start() {
           </ContainerSpeechBubble>
           <SubTitle>Yo soy</SubTitle>
           <ContainerLineTitle>
-            <Title>STEFANIA</Title>
-            <Line/>
+          <LetterComponent top='-60px'></LetterComponent>
+          <Title>
+            {"STEFANIA".split("").map((letter, index) => (
+              <span key={index} style={{ "--index": index }}>{letter}</span>
+            ))}
+          </Title>
+          <Line />
           </ContainerLineTitle>
           <AnimatedText/>
         </ContainerName>
