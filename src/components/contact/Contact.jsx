@@ -1,11 +1,11 @@
 import React from 'react'
-
-
 import Form from './Form'
 import { ContainerLineTitle, Title, Line} from '../about/aboutstyled'
 import LetterComponent from '../UI/LetterComponent'
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import EmailIcon from '@mui/icons-material/Email';
+import { LocationOn } from '@mui/icons-material';
+import { Phone } from '@mui/icons-material';
 import { GitHub } from '@mui/icons-material';
 import { Instagram } from '@mui/icons-material';
 import { LinkedIn } from '@mui/icons-material';
@@ -39,9 +39,18 @@ function Contact() {
         <SubContainer>
           <ContainerDataIcons>
             <ContainerData>
-              <Data>stefaniarosales@live.com</Data>
-              <Data>+54 11 2697 7959</Data>
-              <Data>Argentina, Buenos Aires</Data>
+              <Data>
+                <EmailIcon  style={{ fontSize: '15px'}}/>
+                stefaniarosales@live.com
+              </Data>
+              <Data>
+                <WhatsAppIcon style={{ fontSize: '15px'}}/>
+                +54 11 2697 7959
+              </Data>
+              <Data>
+                <LocationOn style={{ fontSize: '15px'}}/>
+                Argentina, Buenos Aires
+              </Data>
             </ContainerData>
             <ContainerIconsRedesSociales>
                 <ContainerIcon

@@ -41,19 +41,22 @@ export const ContainerDataIcons = styled.div`
 export const ContainerData = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 7px;
 `
 export const Data = styled.p`
     color: #b7b7b7;
     font-size: 16px;
     font-weight: lighter;
     margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 3px;
 `
 export const ContainerIconsRedesSociales = styled.div`
     display: flex;
     width: 100%;
-    gap: 0.5rem;
-    padding: 10px;
+    gap: 0.7rem;
+    padding: 10px 0;
     @media (max-width: 768px) {
         justify-content: center;
     }
