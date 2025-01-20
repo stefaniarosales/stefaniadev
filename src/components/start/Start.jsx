@@ -1,25 +1,43 @@
 
-import React from 'react';
-import { Container, ContainerName, SubTitle, DownloadButton, ContainerSpeechBubble, ContainerIconsBtn, ContainerIconsRedes } from './startstyled';
+import React, { useState} from 'react';
+import { Container, ContainerName, SubTitle, DownloadButton,ProgressBar, ContainerSpeechBubble, ContainerIconsBtn, ContainerIconsRedes } from './startstyled';
 import AnimatedText from './AnimatedText';
 import SpeechBubble from './SpeechBubble';
-import { GitHub } from '@mui/icons-material';
-import { Instagram } from '@mui/icons-material';
-import { LinkedIn } from '@mui/icons-material';
+import { GitHub, Instagram, LinkedIn, Download } from '@mui/icons-material';
 
 import { ContainerLineTitle, Line, Title } from '../about/aboutstyled';
 import {ContainerIcon} from '../contact/contactstyled'
 import DownloadIcon from '@mui/icons-material/Download';
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
 
 function Start() {
+  const [progress, setProgress] = useState(0); // Estado para el progreso
+  const [downloaded, setDownloaded] = useState(false); // Estado para mostrar éxito  
 
-  const handleDownload = () => {
+ const handleDownload = () => {
     const link = document.createElement('a');
     link.href = '../cv/stefaniacv.pdf';
     link.download = 'stefania_cv.pdf';
     link.click();
-  }
+
+    // Simulación de progreso
+    let currentProgress = 0;
+    const interval = setInterval(() => {
+      currentProgress += 10;
+      setProgress(currentProgress);
+
+      if (currentProgress >= 100) {
+        clearInterval(interval);
+        setDownloaded(true);
+        setTimeout(() => {
+          setProgress(0); // Reset del progreso
+          setDownloaded(false); // Reset del botón
+        }, 2000); // Duración del mensaje de éxito
+      }
+    }, 300); // Tiempo entre incrementos
+  };
+
   return (
     <Container>
         <ContainerName>
@@ -39,10 +57,23 @@ function Start() {
           </ContainerLineTitle>
           <AnimatedText/>
         </ContainerName>
+
         <ContainerIconsBtn>
           <DownloadButton onClick={handleDownload}>
-          <DownloadIcon style={{ marginRight: '8px' }} />Descargar CV
-          </DownloadButton>
+          {downloaded ? (
+            <>
+              <CheckCircleIcon style={{ marginRight: '8px' }} />
+              Descargado
+            </>
+          ) : (
+            <>
+              <Download style={{ marginRight: '8px' }} />
+              Descargar CV
+            </>
+          )}
+          <ProgressBar progress={progress} />
+        </DownloadButton>
+
           <ContainerIconsRedes>
           <ContainerIcon
             href="https://github.com/stefaniarosales"

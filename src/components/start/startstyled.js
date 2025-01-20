@@ -49,11 +49,13 @@ export const DownloadButton = styled.button`
   padding: 10px 20px;
   font-weight: bold;
   background: linear-gradient(90deg, rgba(190, 149, 196, 1) 0%, rgba(159, 134, 192, 1) 41%, rgba(224, 177, 203, 1) 100%);
-  color:rgb(231, 229, 229);
+  color: rgb(231, 229, 229);
   border: none;
   border-radius: 25px;
   cursor: pointer;
-  transition:  0.3s ease, transform 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease, transform 0.2s ease;
 
   &:hover {
     transform: scale(1.05);
@@ -68,6 +70,19 @@ export const DownloadButton = styled.button`
     font-size: 1rem;
   }
 `;
+
+export const ProgressBar = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+    background-color: rgba(255, 255, 255, 0.35);
+  width: ${({ progress }) => `${progress}%`};
+  transition: width 0.2s ease;
+`;
+
+
+
 export const ContainerIconsRedes = styled.div`
   display: flex;
   align-items: center;
