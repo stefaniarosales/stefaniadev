@@ -2,10 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Container } from "./animatedtextstyled";
 
-
 const AnimatedText = () => {
   const text = "DEVELOPER FRONTEND";
-
   // Variantes para la animación
   const containerVariants = {
     hidden: { opacity: 1 },
@@ -16,12 +14,10 @@ const AnimatedText = () => {
       },
     },
   };
-
   const letterVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0 },
   };
-
   return (
     <Container>
       <motion.div

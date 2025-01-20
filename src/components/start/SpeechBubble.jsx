@@ -12,7 +12,6 @@ const Bubble = styled.div`
   max-width: 500px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
-
   &:after {
     content: "";
     position: absolute;
@@ -26,7 +25,6 @@ const Bubble = styled.div`
     transform-origin: center; /* Define el eje de rotación */
   }
 `;
-
 const SpeechBubble = ({ text, bgColor, textColor, angle }) => {
   return (
     <motion.div

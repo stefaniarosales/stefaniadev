@@ -18,31 +18,32 @@ import {
   Line,
   Summary
 } from './aboutstyled'
-
+//reusable components
 import LetterComponent from '../UI/LetterComponent'
 
 function About() {
   return (
     <>
       <Container>
-      <ContainerLineTitle>
-        <LetterComponent top='-65px'>A</LetterComponent>
-    <Title>
-        {"ABOUT".split("").map((letter, index) => (
-            <span key={index} style={{ "--index": index }}>{letter}</span>
-        ))}
-    </Title>
-    <Line />
-</ContainerLineTitle>
+        <ContainerLineTitle>
+          <LetterComponent top='-65px'>A</LetterComponent>
+          <Title>
+            {"ABOUT".split("").map((letter, index) => (
+                <span key={index} style={{ "--index": index }}>{letter}</span>
+            ))}
+          </Title>
+          <Line />
+        </ContainerLineTitle>
         <ContainerImgData>
-          <Img src='/img/stefania.jpg'/>
+          <Img src='/img/stefania.webp'/>
           <ContentData>
             <ContainerNameLastName>
               <Name>NOMBRE:</Name><NameLastName>STEFANIA ROSALES</NameLastName>
             </ContainerNameLastName>
             <Profession>developer frontend</Profession>
             <ContainerData>
-              <Data>Intereses:</Data><Answer>Diseño UX/UI, lectura, aprendizaje constante de nuevas tecnologías(actualmente explorando Node.js).</Answer>
+              <Data>Intereses:</Data>
+              <Answer>Diseño UX/UI, lectura, aprendizaje constante de nuevas tecnologías(actualmente explorando Node.js).</Answer>
             </ContainerData>
             <ContainerSummary>
               <Summary>Soy una Desarrolladora frontend con una sólida base en HTML, CSS, JavaScript y React, apasionada
@@ -55,7 +56,6 @@ function About() {
             </ContainerSummary>
           </ContentData>
         </ContainerImgData>
-        
       </Container>
     </>
   )

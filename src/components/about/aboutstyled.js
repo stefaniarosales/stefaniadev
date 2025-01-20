@@ -32,7 +32,6 @@ export const ContentData = styled.div`
     display: flex;
     flex-direction: column;
 `
-
 //container línea y título about 
 export const ContainerLineTitle = styled.div`
     position: relative;
@@ -44,7 +43,6 @@ export const ContainerLineTitle = styled.div`
         align-items: center;
     }
 `;
-
 //título about con animación
 export const Title = styled.h2`
     font-size: 5rem;
@@ -59,7 +57,6 @@ export const Title = styled.h2`
         font-size: 4rem;
         text-align: center;
     }
-
     // Animación para las letras
     span {
         display: inline-block;
@@ -68,7 +65,6 @@ export const Title = styled.h2`
         animation: slideIn 0.5s forwards;
         animation-delay: calc(var(--index) * 0.1s);
     }
-
     @keyframes slideIn {
         to {
             opacity: 1;
@@ -76,7 +72,6 @@ export const Title = styled.h2`
         }
     }
 `;
-
 //línea decorativa con animación
 export const Line = styled.div`
     width: 200px;
@@ -87,7 +82,6 @@ export const Line = styled.div`
     transform: translateX(-50px);
     animation: slideInLine 0.5s forwards;
     animation-delay: 1s;
-
     @keyframes slideInLine {
         to {
             opacity: 1;
@@ -95,15 +89,12 @@ export const Line = styled.div`
         }
     }
 `;
-
-
 // Estilo de la imagen
 export const Img = styled.img`
     width: 150px;
     height: 280px;
     object-fit: cover;
 `;
-
 //nombre
 export const Name = styled.h3`
     font-size: 30px;
@@ -172,14 +163,12 @@ export const Data = styled.h4`
     font-style: italic;
     color: #959595;
 `
-
 //imformación de dirección-mail y intereses.
 export const Answer = styled.p`
     font-size: 16px;
     margin: 0;
     color: #959595;
 `
-
 //container de resumen 
 export const ContainerSummary = styled.div`
     padding: 1rem 0;
