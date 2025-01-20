@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes} from "styled-components";
 
 export const Container = styled.section`
     width: 100%;
@@ -97,20 +97,13 @@ export const Line = styled.div`
 `;
 
 
-//imagén
+// Estilo de la imagen
 export const Img = styled.img`
     width: 150px;
-    height: 250px;
+    height: 280px;
     object-fit: cover;
-    object-position: center;
-    -webkit-box-shadow: -10px 10px 0px 4px rgba(190,149,196,1);
-    -moz-box-shadow: -5px 10px 0px 4px rgba(190,149,196,1);
-    box-shadow: -8px 8px 0px 4px rgba(190,149,196,1);
-    @media (max-width: 768px) {
-        width: 150px;
-        height: 250px;
-    }
-`
+`;
+
 //nombre
 export const Name = styled.h3`
     font-size: 30px;

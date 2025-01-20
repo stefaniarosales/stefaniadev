@@ -28,6 +28,7 @@ html,body {
     li {
     list-style: none;
     }
+    
 `
 export const ContainerGeneral = styled.div`
     display: flex;
