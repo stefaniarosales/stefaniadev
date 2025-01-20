@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const NavbarStyled = styled.nav`
-    width: 250px;
+    width: 200px;
     height: 100vh;
     backdrop-filter: blur(8px) saturate(180%);
     -webkit-backdrop-filter: blur(8px) saturate(180%);
