@@ -25,8 +25,8 @@ function Start() {
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '../cv/stefaniacv.pdf';
-    link.download = 'stefania_cv.pdf';
+    link.href = '../cv/stefaniadev-cv.pdf';
+    link.download = 'stefaniadev-cv.pdf';
     link.click();
 
     // Simulación de progreso
