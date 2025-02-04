@@ -1,5 +1,3 @@
-import React from 'react'
-
 import {
   Container,
   ContainerImgData,
@@ -35,7 +33,7 @@ function About() {
           <Line />
         </ContainerLineTitle>
         <ContainerImgData>
-          <Img src='/img/stefania.webp'/>
+          <Img src='https://res.cloudinary.com/dbotvxyzq/image/upload/v1738673390/stefania_de99fj.webp'/>
           <ContentData>
             <ContainerNameLastName>
               <Name>NOMBRE:</Name><NameLastName>STEFANIA ROSALES</NameLastName>
