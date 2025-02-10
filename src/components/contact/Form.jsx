@@ -57,31 +57,28 @@ function Form() {
             <FormContainer>
                 <FormTitle>Contáctame</FormTitle>
                 <StyledForm onSubmit={formik.handleSubmit}>
-                        <Input
-                            type= "text"
-                            name= "name"
-                            placeholder= "Nombre"
-                            onChange= {formik.handleChange}
-                            onBlur= {formik.handleBlur}
-                            value= {formik.values.name}
-                        />
-                        {formik.touched.name && formik.errors.name ? (
-                            <ErrorMessage>{formik.errors.name}</ErrorMessage>
-                        ): null}
-
-                        <Input
-                            type= "email"
-                            name= "email"
-                            placeholder= "Email"
-                            onChange= {formik.handleChange}
-                            onBlur= {formik.handleBlur}
-                            value= {formik.values.email}
-                        />
-                        {formik.touched.email && formik.errors.email ? (
-                            <ErrorMessage>{formik.errors.email}</ErrorMessage>
-                        ) : null} 
-                    
-                    
+                    <Input
+                        type= "text"
+                        name= "name"
+                        placeholder= "Nombre"
+                        onChange= {formik.handleChange}
+                        onBlur= {formik.handleBlur}
+                        value= {formik.values.name}
+                    />
+                    {formik.touched.name && formik.errors.name ? (
+                        <ErrorMessage>{formik.errors.name}</ErrorMessage>
+                    ): null}
+                    <Input
+                        type= "email"
+                        name= "email"
+                        placeholder= "Email"
+                        onChange= {formik.handleChange}
+                        onBlur= {formik.handleBlur}
+                        value= {formik.values.email}
+                    />
+                    {formik.touched.email && formik.errors.email ? (
+                        <ErrorMessage>{formik.errors.email}</ErrorMessage>
+                    ) : null} 
                     <TextArea
                         name= "message"
                         placeholder= "Mensaje"
