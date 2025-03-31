@@ -23,7 +23,6 @@ const HorizontalScroll = () => {
         left: '0',
         zIndex: '10',
         overflow: 'hidden', // Esto oculta el contenido fuera del contenedor
-        letterSpacing: '1px',
       }}
     >
     {/* Contenedor animado que se mueve de derecha a izquierda */}
