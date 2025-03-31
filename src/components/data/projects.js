@@ -1,4 +1,4 @@
-export const projects = [
+const projects = [
     {
       title: "Pottermania",
       url: "https://pottermania.vercel.app/",
@@ -27,3 +27,5 @@ export const projects = [
       mobileImage: "https://res.cloudinary.com/dbotvxyzq/image/upload/v1738677046/kyra-mobile_nkw1u6.png"
     },
   ];
+
+export default projects;
