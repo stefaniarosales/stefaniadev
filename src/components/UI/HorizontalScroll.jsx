@@ -23,50 +23,27 @@ const HorizontalScroll = () => {
         left: '0',
         zIndex: '10',
         overflow: 'hidden', // Esto oculta el contenido fuera del contenedor
+        letterSpacing: '1px',
       }}
     >
-      {/* Contenedor animado que se mueve de derecha a izquierda */}
-      <animated.div style={{ display: 'flex', ...props }}>
-        <div style={{ display: 'inline-block', marginRight: '30px', color: '#fff' }}>
-          React
-        </div>
-        <div style={{ display: 'inline-block', marginRight: '30px', color: '#fff' }}>
-          Styled-components
-        </div>
-        <div style={{ display: 'inline-block', marginRight: '30px', color: '#fff' }}>
-          JavaScript
-        </div>
-        <div style={{ display: 'inline-block', marginRight: '30px', color: '#fff' }}>
-          HTML
-        </div>
-        <div style={{ display: 'inline-block', marginRight: '30px', color: '#fff' }}>
-          CSS
-        </div>
-        <div style={{ display: 'inline-block', marginRight: '30px', color: '#fff' }}>
-        Redux Toolkit
-        </div>
-        <div style={{ display: 'inline-block', marginRight: '30px', color: '#fff' }}>
-          Git
-        </div>
-        <div style={{ display: 'inline-block', marginRight: '30px', color: '#fff' }}>
-          GitHub
-        </div>
-        <div style={{ display: 'inline-block', marginRight: '30px', color: '#fff' }}>
-         Bootstrap
-        </div>
-        <div style={{ display: 'inline-block', marginRight: '30px', color: '#fff' }}>
-         sweetalert2
-        </div>
-        <div style={{ display: 'inline-block', marginRight: '30px', color: '#fff' }}>
-          React Router
-        </div>
-        <div style={{ display: 'inline-block', marginRight: '30px', color: '#fff' }}>
-         swiper
-        </div>
+    {/* Contenedor animado que se mueve de derecha a izquierda */}
+    <animated.div style={{ display: 'flex', ...props }}>
+        <div style={{ display: 'inline-block', marginRight: '30px', color: '#b7b7b7' }}>React</div>
+        <div style={{ display: 'inline-block', marginRight: '30px', color: '#B7B7B7' }}>Styled components</div>
+        <div style={{ display: 'inline-block', marginRight: '30px', color: '#B7B7B7' }}>JavaScript</div>
+        <div style={{ display: 'inline-block', marginRight: '30px', color: '#B7B7B7' }}>HTML</div>
+        <div style={{ display: 'inline-block', marginRight: '30px', color: '#B7B7B7' }}>CSS</div>
+        <div style={{ display: 'inline-block', marginRight: '30px', color: '#B7B7B7' }}>Redux Toolkit</div>
+        <div style={{ display: 'inline-block', marginRight: '30px', color: '#B7B7B7' }}>Git</div>
+        <div style={{ display: 'inline-block', marginRight: '30px', color: '#B7B7B7' }}>GitHub</div>
+        <div style={{ display: 'inline-block', marginRight: '30px', color: '#B7B7B7' }}>Bootstrap</div>
+        <div style={{ display: 'inline-block', marginRight: '30px', color: '#B7B7B7' }}>Sweetalert2</div>
+        <div style={{ display: 'inline-block', marginRight: '30px', color: '#B7B7B7' }}>React Router</div>
+        <div style={{ display: 'inline-block', marginRight: '30px', color: '#B7B7B7' }}>Swiper</div>
+        <div style={{ display: 'inline-block', marginRight: '30px', color: '#B7B7B7' }}>Material UI</div>
+        <div style={{ display: 'inline-block', marginRight: '30px', color: '#B7B7B7' }}>Redux persist</div>
+    </animated.div>
 
-      </animated.div>
-
-      
     </div>
   );
 };
