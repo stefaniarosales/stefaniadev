@@ -8,7 +8,7 @@ export const Container = styled.section`
     justify-content: center;
     padding: 1rem 1rem 0 3rem;
     gap: 1rem;
-    max-width: 800px;
+    max-width: 1050px;
     @media (max-width: 768px) {
         justify-content: flex-start;
         padding: 50px 0 0 0;
@@ -80,7 +80,7 @@ export const FormContainer = styled.div`
     max-width: 350px;
     padding: 20px;
     border: 1px solid #b7b7b7;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 `;
 

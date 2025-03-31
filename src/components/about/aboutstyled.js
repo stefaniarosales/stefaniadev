@@ -6,7 +6,7 @@ export const Container = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 800px;
+    max-width: 1050px;
     @media (max-width: 768px) {
         padding: 50px 0 0 0;
         justify-content: flex-start;
@@ -93,6 +93,7 @@ export const Line = styled.div`
 export const Img = styled.img`
     width: 150px;
     height: 280px;
+    border-radius: 10px;
     object-fit: cover;
 `;
 //nombre

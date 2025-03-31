@@ -15,7 +15,7 @@ export const Container = styled.section`
 
 export const ProjectsContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   padding: 1rem;
   justify-content: center;
@@ -73,11 +73,11 @@ export const TechIcon = styled.img`
 
 export const ButtonContainer = styled.div`
   display: flex;
-  gap: 10px;
+  gap: 20px;
 `;
 
 export const Button = styled.a`
-  width: 45%;
+  width: 55%;
   height: 15px;
   display: flex;
   align-items: center;
