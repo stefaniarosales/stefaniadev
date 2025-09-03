@@ -7,8 +7,8 @@ import Contact from "./components/contact/Contact"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import HorizontalScroll from "./components/UI/HorizontalScroll"
-
+/* import HorizontalScroll from "./components/UI/HorizontalScroll"
+ */
 
 import {Routes,Route} from "react-router-dom"
 import { ContainerGeneral } from "./components/globalstyled/globalstyled"
@@ -28,7 +28,6 @@ function App() {
           <Route/>
           <Route/>
         </Routes>
-        <HorizontalScroll/>
       </ContainerGeneral>
     </>
   )
