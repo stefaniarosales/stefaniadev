@@ -46,7 +46,7 @@ function Contact() {
               </Data>
               <Data>
                 <LocationOn style={{ fontSize: '15px'}}/>
-                Argentina, Buenos Aires
+                Argentina, Mendoza.
               </Data>
             </ContainerData>
             <ContainerIconsRedesSociales>

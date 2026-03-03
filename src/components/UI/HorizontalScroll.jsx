@@ -1,71 +1,83 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { useSpring, animated } from "react-spring";
 
-const HorizontalScroll = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+// 1. Constantes fuera del componente para evitar redeclaraciones
+const TECHNOLOGIES = [
+  "React", "Styled-components", "JavaScript", "HTML", "CSS", 
+  "Redux Toolkit", "Git", "GitHub", "Bootstrap", "Sweetalert2",
+  "React Router", "Swiper", "Material UI", "Redux Persist"
+];
 
-  // Detecta el cambio de tamaño de pantalla
+// 2. Custom Hook para manejar el responsive de forma limpia
+const useIsMobile = (breakpoint = 768) => {
+  const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
+    // Definir estado inicial en el client-side
+    const checkMobile = () => setIsMobile(window.innerWidth <= breakpoint);
+    checkMobile();
 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, [breakpoint]);
 
-  // Animación de desplazamiento de derecha a izquierda
+  return isMobile;
+};
+
+const HorizontalScroll = () => {
+  const isMobile = useIsMobile();
+
+  // 3. Configuración de animación optimizada
   const scrollAnimation = useSpring({
-    from: { transform: "translateX(100%)" },
-    to: { transform: "translateX(-100%)" },
+    from: { transform: "translateX(0%)" },
+    to: { transform: "translateX(-50%)" }, // Solo movemos el 50% porque duplicaremos la lista
     reset: true,
     loop: true,
-    config: { duration: 15000 }, // Velocidad de la animación
+    config: { duration: 20000, precision: 0.1 }, 
   });
 
-  const technologies = [
-    "React", "Styled-components", "JavaScript", "HTML", "CSS", 
-    "Redux Toolkit", "Git", "GitHub", "Bootstrap", "Sweetalert2",
-    "React Router", "Swiper", "Material UI", "Redux Persist"
-  ];
+  // 4. Estilos extraídos para mayor claridad
+  const containerStyle = {
+    width: "100%",
+    height: "30px",
+    position: "fixed",
+    left: 0,
+    zIndex: 10,
+    overflow: "hidden",
+    display: "flex",
+    alignItems: "center",
+    backgroundColor: "#1a1a1a", // Opcional: fondo para visibilidad
+    top: isMobile ? 0 : "auto",
+    bottom: isMobile ? "auto" : 0,
+  };
 
   return (
-    <div
-      style={{
-        width: "100%",
-        height: "25px",
-        position: "fixed",
-        left: "0",
-        zIndex: "10",
-        overflow: "hidden",
-        display: "flex",
-        alignItems: "center",
-        top: isMobile ? "0" : "auto",
-        bottom: isMobile ? "auto" : "0",
-      }}
-    >
+    <aside style={containerStyle} aria-label="Tecnologías">
       <animated.div
         style={{
           display: "flex",
-          alignItems: "center",
           whiteSpace: "nowrap",
+          willChange: "transform", // Optimización de GPU
           ...scrollAnimation,
         }}
       >
-        {technologies.map((tech, index) => (
-          <div
-            key={index}
+        {/* Duplicamos la lista para crear el efecto de scroll infinito sin saltos */}
+        {[...TECHNOLOGIES, ...TECHNOLOGIES].map((tech, index) => (
+          <span
+            key={`${tech}-${index}`}
             style={{
               color: "#B7B7B7",
               fontSize: "14px",
-              margin: "0 20px",
+              fontWeight: "500",
+              margin: "0 30px",
+              letterSpacing: "1px"
             }}
           >
-            {tech}
-          </div>
+            {tech.toUpperCase()}
+          </span>
         ))}
       </animated.div>
-    </div>
+    </aside>
   );
 };
 
