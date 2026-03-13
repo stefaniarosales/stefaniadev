@@ -19,7 +19,7 @@ import {
 } from './startstyled';
 import LetterComponent from '../UI/LetterComponent';
 import SpeechBubble from './SpeechBubble';
-import { GitHub, Instagram, LinkedIn, Download, ArrowForward } from '@mui/icons-material';
+import { GitHub, Instagram, LinkedIn, FileDownloadOutlined, ArrowForwardOutlined } from '@mui/icons-material';
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { ContainerLineTitle, Line, Title } from '../about/aboutstyled';
 import { ContainerIcon } from '../contact/contactstyled';
@@ -113,27 +113,27 @@ function Start() {
             <ContainerIconsBtn style={{ flexDirection: 'column', gap: '1.5rem' }}>
               <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center' }}>
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <DownloadButton onClick={handleDownload}>
-                    {downloaded ? (
-                      <>
-                        <CheckCircleIcon style={{ marginRight: '8px' }} />
-                        Descargado
-                      </>
-                    ) : (
-                      <>
-                        <Download style={{ marginRight: '8px' }} />
-                        Descargar CV
-                      </>
-                    )}
+                <DownloadButton onClick={handleDownload}>
+                  {downloaded ? (
+                    <>
+                      <CheckCircleIcon style={{ marginRight: '8px' }} />
+                      Descargado
+                    </>
+                  ) : (
+                    <>
+                      <FileDownloadOutlined style={{ marginRight: '8px' }} />
+                      Descargar CV
+                    </>
+                  )}
                     <ProgressBar progress={progress} />
                   </DownloadButton>
                 </motion.div>
                 
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <SecondaryButton onClick={() => navigate('/Projects')}>
-                    <ArrowForward style={{ marginRight: '8px' }} />
-                    Ver Proyectos
-                  </SecondaryButton>
+              <SecondaryButton onClick={() => navigate('/Projects')}>
+                <ArrowForwardOutlined style={{ marginRight: '8px' }} />
+                Ver Proyectos
+              </SecondaryButton>
                 </motion.div>
               </div>
               
