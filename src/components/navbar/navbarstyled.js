@@ -12,7 +12,10 @@ const glow = keyframes`
 export const NavbarStyled = styled.nav`
     width: 200px;
     min-height: 100vh;
-    background: var(--glass-bg);
+    background: 
+        radial-gradient(ellipse at 20% 20%, rgba(159, 134, 192, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 80%, rgba(224, 177, 203, 0.1) 0%, transparent 50%),
+        linear-gradient(180deg, #0d0d12 0%, #16161e 100%);
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);
     border-right: 1px solid var(--glass-border);
