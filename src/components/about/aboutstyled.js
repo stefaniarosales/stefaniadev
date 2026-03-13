@@ -1,4 +1,11 @@
-import styled, { keyframes} from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const slideIn = keyframes`
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+`;
 
 export const Container = styled.section`
     width: 100%;
@@ -12,7 +19,7 @@ export const Container = styled.section`
         justify-content: flex-start;
     }
 `
-//imagén y datos personales
+
 export const ContainerImgData = styled.div`
     width: 100%;
     display: flex;
@@ -27,12 +34,12 @@ export const ContainerImgData = styled.div`
         width: unset;
     }
 `
-//datos personales
+
 export const ContentData = styled.div`
     display: flex;
     flex-direction: column;
 `
-//container línea y título about 
+
 export const ContainerLineTitle = styled.div`
     position: relative;
     display: flex;
@@ -43,84 +50,77 @@ export const ContainerLineTitle = styled.div`
         align-items: center;
     }
 `;
-//título about con animación
+
 export const Title = styled.h2`
     font-size: 5rem;
-    font-weight: bold;
+    font-weight: 700;
     letter-spacing: 3px;
     margin: 0;
-    color: #B7B7B7;
-    overflow: hidden; // Evita que las letras se muestren antes de la animación
+    color: var(--text-secondary);
+    overflow: hidden;
     white-space: nowrap;
-    display: inline-block; // Necesario para la animación de texto
-    @media (max-width: 768px) {
-        font-size: 4rem;
-        text-align: center;
-    }
-    // Animación para las letras
+    display: inline-block;
+    font-family: var(--font-display);
+    
     span {
         display: inline-block;
         opacity: 0;
         transform: translateX(-50px);
-        animation: slideIn 0.5s forwards;
+        animation: ${slideIn} 0.5s forwards;
         animation-delay: calc(var(--index) * 0.1s);
     }
-    @keyframes slideIn {
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
+    
+    @media (max-width: 768px) {
+        font-size: 4rem;
+        text-align: center;
     }
 `;
-//línea decorativa con animación
+
 export const Line = styled.div`
     width: 200px;
-    background-color: #B7B7B7;
+    background: var(--gradient-lavanda);
     padding: 2px;
     margin-left: 200px;
     opacity: 0;
     transform: translateX(-50px);
-    animation: slideInLine 0.5s forwards;
+    animation: ${slideIn} 0.5s forwards;
     animation-delay: 1s;
-    @keyframes slideInLine {
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
 `;
-// Estilo de la imagen
+
 export const Img = styled.img`
     width: 150px;
     height: 280px;
     border-radius: 10px;
     object-fit: cover;
+    box-shadow: var(--glow-lavanda);
+    border: 2px solid var(--lavanda-dark);
 `;
-//nombre
+
 export const Name = styled.h3`
     font-size: 30px;
     margin: 0;
-    background: linear-gradient(90deg, rgba(190, 149, 196, 1) 0%, rgba(159, 134, 192, 1) 41%, rgba(224, 177, 203,   1) 100%);
+    background: var(--gradient-lavanda);
     background-clip: text; 
     color: transparent; 
+    font-family: var(--font-display);
     @media (max-width: 768px) {
         font-size: 25px;
     }
 `
-//profesión
+
 export const Profession = styled.h3`
     font-size: 20px;
-    font-weight: lighter;
+    font-weight: 300;
     margin: 0;
     font-style: italic;
-    color: #959595;
+    color: var(--text-muted);
     padding-bottom: 1rem;
     @media (max-width: 768px) {
         padding: 0 1rem 1rem ;
         text-align: center;
     }
 `
-//contenedor de nombre y apellido
+
 export const ContainerNameLastName = styled.div`
     display: flex;
     gap: 1rem;
@@ -130,25 +130,26 @@ export const ContainerNameLastName = styled.div`
         justify-content: center;
     }
 `
-//nombre y apellido
+
 export const NameLastName = styled.h3`
     font-size: 30px;
     margin: 0;
-    background: linear-gradient(90deg, rgba(190, 149, 196, 1) 0%, rgba(159, 134, 192, 1) 41%, rgba(224, 177, 203, 1) 100%);
+    background: var(--gradient-lavanda);
     background-clip: text; 
     color: transparent;
+    font-family: var(--font-display);
     @media (max-width: 768px) {
         font-size: 25px;
     }
 `
-//contenedor de dirreción-mail y intereses.
+
 export const ContainerData = styled.div`
     max-width: 950px;
     display: flex;
     gap: 1rem;
     align-items: center;
-    color: #959595;
-    font-weight: lighter;
+    color: var(--text-muted);
+    font-weight: 300;
     @media (max-width: 768px) {
         flex-wrap: wrap;
         gap: 0;
@@ -157,20 +158,20 @@ export const ContainerData = styled.div`
         justify-content: center;
     }
 `
-//dirección-mail y intereses.
+
 export const Data = styled.h4`
     font-size: 16px;
     margin: 0;
     font-style: italic;
-    color: #959595;
+    color: var(--text-muted);
 `
-//imformación de dirección-mail y intereses.
+
 export const Answer = styled.p`
     font-size: 16px;
     margin: 0;
-    color: #959595;
+    color: var(--text-muted);
 `
-//container de resumen 
+
 export const ContainerSummary = styled.div`
     padding: 1rem 0;
     @media (max-width: 768px) {
@@ -178,14 +179,15 @@ export const ContainerSummary = styled.div`
         text-align: center;
     }
 `
-//resumenes
+
 export const Summary = styled.h5`
     max-width: 950px;
     margin: 0;
-    color: #959595;
-    font-weight: lighter;
+    color: var(--text-muted);
+    font-weight: 300;
     font-size: 16px;
     padding-top: 5px;
+    line-height: 1.6;
     @media (max-width: 768px) {
     font-size: 18px;
     }

@@ -1,4 +1,16 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const gradientBorder = keyframes`
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+`;
 
 export const Container = styled.section`
     width: 100%;
@@ -12,6 +24,7 @@ export const Container = styled.section`
         justify-content: flex-start;
     }
 `;
+
 export const ContainerSkills = styled.div`
     width: 80%;
     display: flex;
@@ -20,9 +33,9 @@ export const ContainerSkills = styled.div`
         flex-direction: column;
         gap: 1rem;
         width: 100%;
-        gap: 1rem;
     }
 `;
+
 export const ContainerTechnicalSkills = styled.div`
     width: 60%;
     display: flex;
@@ -32,13 +45,16 @@ export const ContainerTechnicalSkills = styled.div`
         width: 100%;
     }
 `;
+
 export const TitleTechnicalSkills = styled.h3`
     font-size: 25px;
     margin: 0;
-    color: #B7B7B7;
+    color: var(--text-secondary);
     text-align: center;
     padding: 1rem;
+    font-family: var(--font-display);
 `;
+
 export const SubContainerTechnicalSkills = styled.div`
     display: flex;
     flex-wrap: wrap;
@@ -48,6 +64,7 @@ export const SubContainerTechnicalSkills = styled.div`
         width: 100%;
     }
 `;
+
 export const ContainerSoftSkills = styled.div`
     width: 55%;
     display: flex;
@@ -58,13 +75,16 @@ export const ContainerSoftSkills = styled.div`
         width: 100%;
     }
 `;
+
 export const TitleSoftSkills = styled.h3`
     font-size: 25px;
     margin: 0;
-    color: #B7B7B7;
+    color: var(--text-secondary);
     padding: 1rem;
     text-align: center;
+    font-family: var(--font-display);
 `;
+
 export const SubContainerSoftSkills = styled.div`
     display: flex;
     flex-wrap: wrap;
@@ -74,40 +94,65 @@ export const SubContainerSoftSkills = styled.div`
         width: 100%;
     }
 `;
+
 export const ContainerIllustrationTitle = styled.div`
     width: ${(props) => props.size || '60px'}; 
     height: ${(props) => props.size || '60px'}; 
     padding: 1rem;
 `;
+
 export const Illustration = styled.img`
     width: ${(props) => props.sizes || '60px'}; 
     height: ${(props) => props.sizes || '60px'}; 
     padding: 0.5rem;
-    background-color: rgb(59, 58, 58);
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
 `;
+
 export const TitleIllustration = styled.h4`
     font-size: 10px;
-    font-weight: lighter;
+    font-weight: 300;
     margin: 0;
-    color: #959595;
+    color: var(--text-muted);
     text-align: center;
 `;
 
-
 export const SoftSkillItem = styled.div`
-    background-color:rgba(90, 90, 90, 0.75);
-    color: #b7b7b7;
-    padding: 10px 20px;
-    border-radius: 10px;
+    background: var(--bg-card);
+    color: var(--text-secondary);
+    padding: 12px 24px;
+    border-radius: 8px;
     text-align: center;
-    font-size: 16px;
-    font-weight: bold;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
     cursor: default;
+    position: relative;
+    overflow: hidden;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: 8px;
+        padding: 2px;
+        background: var(--gradient-lavanda);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        opacity: 0.5;
+        transition: opacity 0.3s ease;
+    }
 
     &:hover {
-        transform: scale(1.05);
+        transform: translateY(-3px);
+        box-shadow: var(--glow-lavanda);
+        
+        &::before {
+            opacity: 1;
+            animation: ${gradientBorder} 2s linear infinite;
+        }
     }
 
     @media (max-width: 768px) {
@@ -120,27 +165,35 @@ export const TechnicalSkillItem = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color:rgba(90, 90, 90, 0.75);
-    border-radius: 10px;
-    padding: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    background: var(--bg-card);
+    border-radius: 12px;
+    padding: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
     cursor: default;
-    width: 50px; /* Tamaño uniforme */
+    width: 70px;
     text-align: center;
+    backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
 
     &:hover {
-        transform: scale(1.05);
+        transform: translateY(-5px) scale(1.05);
+        box-shadow: var(--glow-lavanda);
+        border-color: var(--lavanda-dark);
     }
 
     @media (max-width: 768px) {
-        width: 50px;
+        width: 65px;
     }
 `;
 
 export const TechnicalSkillImage = styled.img`
-    width: 30px;
-    height: 30px;
-    padding: 10px;
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+    transition: transform 0.3s ease;
+    
+    ${TechnicalSkillItem}:hover & {
+        transform: scale(1.1);
+    }
 `;
-
