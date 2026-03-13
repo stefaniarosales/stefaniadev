@@ -20,16 +20,16 @@ const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
         opacity: 1,
-        transition: { staggerChildren: 0.08, delayChildren: 0.2 },
+        transition: { staggerChildren: 0.05, delayChildren: 0.1 },
     },
 };
 
 const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 10 },
     visible: {
         opacity: 1,
         y: 0,
-        transition: { duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] },
+        transition: { duration: 0.3 }
     },
 };
 
@@ -74,7 +74,7 @@ function Skills() {
                         <SubContainerTechnicalSkills>
                             {technicalSkills.map((item, index) => (
                                 <motion.div key={index} variants={itemVariants}>
-                                    <TechnicalSkillItem>
+                                    <TechnicalSkillItem whileHover={{ scale: 1.1, y: -5 }}>
                                         <TechnicalSkillImage src={item.src} alt={item.title} />
                                     </TechnicalSkillItem>
                                 </motion.div>
@@ -86,7 +86,7 @@ function Skills() {
                         <SubContainerSoftSkills>
                             {softSkills.map((skill, index) => (
                                 <motion.div key={index} variants={itemVariants}>
-                                    <SoftSkillItem>{skill.toUpperCase()}</SoftSkillItem>
+                                    <SoftSkillItem whileHover={{ scale: 1.05, y: -3 }}>{skill.toUpperCase()}</SoftSkillItem>
                                 </motion.div>
                             ))}
                         </SubContainerSoftSkills>

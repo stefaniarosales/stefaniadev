@@ -29,25 +29,13 @@ const containerVariants = {
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 10 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] },
+    transition: { duration: 0.3 }
   },
 };
-
-const contactInfo = [
-  { icon: <EmailIcon style={{ fontSize: '15px'}}/>, text: 'stefaniarosales@live.com' },
-  { icon: <WhatsAppIcon style={{ fontSize: '15px'}}/>, text: '+54 11 2697 7959' },
-  { icon: <LocationOn style={{ fontSize: '15px'}}/>, text: 'Argentina, Mendoza.' },
-];
-
-const socialLinks = [
-  { href: "https://github.com/stefaniarosales", icon: <GitHub style={{ fontSize: '30px' }}/> },
-  { href: "https://www.instagram.com/stefisua/", icon: <Instagram style={{ fontSize: '30px' }}/> },
-  { href: "https://www.linkedin.com/in/stefaniarosales/", icon: <LinkedIn style={{ fontSize: '30px' }}/> },
-];
 
 function Contact() {
   return (
@@ -70,25 +58,41 @@ function Contact() {
         <SubContainer>
           <ContainerDataIcons>
             <ContainerData>
-              {contactInfo.map((item, index) => (
-                <Data key={index}>
-                  {item.icon}
-                  {item.text}
+              <motion.div variants={itemVariants}>
+                <Data>
+                  <EmailIcon style={{ fontSize: '15px'}}/>
+                  stefaniarosales@live.com
                 </Data>
-              ))}
+              </motion.div>
+              <motion.div variants={itemVariants}>
+                <Data>
+                  <WhatsAppIcon style={{ fontSize: '15px'}}/>
+                  +54 11 2697 7959
+                </Data>
+              </motion.div>
+              <motion.div variants={itemVariants}>
+                <Data>
+                  <LocationOn style={{ fontSize: '15px'}}/>
+                  Argentina, Mendoza.
+                </Data>
+              </motion.div>
             </ContainerData>
             <ContainerIconsRedesSociales>
-              {socialLinks.map((link, index) => (
-                <motion.div key={index} variants={itemVariants}>
-                  <ContainerIcon
-                    href={link.href}
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                  >
-                    {link.icon}
-                  </ContainerIcon>
-                </motion.div>
-              ))}
+              <motion.div variants={itemVariants} whileHover={{ scale: 1.1 }}>
+                <ContainerIcon href="https://github.com/stefaniarosales" target="_blank" rel="noopener noreferrer">
+                  <GitHub style={{ fontSize: '30px' }}/>
+                </ContainerIcon>
+              </motion.div>
+              <motion.div variants={itemVariants} whileHover={{ scale: 1.1 }}>
+                <ContainerIcon href="https://www.instagram.com/stefisua/" target="_blank" rel="noopener noreferrer">
+                  <Instagram style={{ fontSize: '30px' }}/>
+                </ContainerIcon>
+              </motion.div>
+              <motion.div variants={itemVariants} whileHover={{ scale: 1.1 }}>
+                <ContainerIcon href="https://www.linkedin.com/in/stefaniarosales/" target="_blank" rel="noopener noreferrer">
+                  <LinkedIn style={{ fontSize: '30px' }}/>
+                </ContainerIcon>
+              </motion.div>
             </ContainerIconsRedesSociales>
           </ContainerDataIcons>
           <Form/>

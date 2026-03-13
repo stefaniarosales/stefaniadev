@@ -21,17 +21,16 @@ const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.12, delayChildren: 0.2 },
+    transition: { staggerChildren: 0.1, delayChildren: 0.2 },
   },
 };
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 40, scale: 0.95 },
+  hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
-    scale: 1,
-    transition: { duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] },
+    transition: { duration: 0.4 }
   },
 };
 
@@ -55,7 +54,7 @@ const Projects = () => {
       >
         <ProjectsContainer>
           {projectsData.map((project, index) => (
-            <ProjectCard key={index} as={motion.div} variants={cardVariants}>
+            <ProjectCard key={index} as={motion.div} variants={cardVariants} whileHover={{ y: -10 }}>
               <ProjectImage src={project.image} alt={project.title} />
               <Overlay>
                 <h3>{project.title}</h3>

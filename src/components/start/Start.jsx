@@ -23,53 +23,18 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.15,
-      delayChildren: 0.3,
+      staggerChildren: 0.1,
+      delayChildren: 0.2,
     },
   },
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: {
-      duration: 0.6,
-      ease: [0.25, 0.46, 0.45, 0.94],
-    },
-  },
-};
-
-const buttonVariants = {
-  hidden: { opacity: 0, scale: 0.8 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      duration: 0.5,
-      ease: "backOut",
-    },
-  },
-  hover: {
-    scale: 1.05,
-    transition: { duration: 0.2 },
-  },
-  tap: {
-    scale: 0.95,
-  },
-};
-
-const socialVariants = {
-  hidden: { opacity: 0, x: -20 },
-  visible: (i) => ({
-    opacity: 1,
-    x: 0,
-    transition: { delay: 0.8 + i * 0.1, duration: 0.4 },
-  }),
-  hover: {
-    scale: 1.15,
-    transition: { duration: 0.2 },
+    transition: { duration: 0.5 }
   },
 };
 
@@ -98,12 +63,6 @@ function Start() {
     }, 100);
   };
 
-  const socialLinks = [
-    { href: "https://github.com/stefaniarosales", icon: <GitHub style={{ fontSize: '30px' }}/> },
-    { href: "https://www.instagram.com/stefisua/", icon: <Instagram style={{ fontSize: '30px' }}/> },
-    { href: "https://www.linkedin.com/in/stefaniarosales/", icon: <LinkedIn style={{ fontSize: '30px' }}/> },
-  ];
-
   return (
     <Container>
       <motion.div
@@ -111,8 +70,8 @@ function Start() {
         initial="hidden"
         animate="visible"
       >
-        <ContainerName variants={itemVariants}>
-          <ContainerSpeechBubble variants={itemVariants}>
+        <ContainerName>
+          <ContainerSpeechBubble>
             <SpeechBubble
               text="¡Hola!"
               bgColor="var(--lavanda-light)"
@@ -120,8 +79,8 @@ function Start() {
               angle="25deg"
             />
           </ContainerSpeechBubble>
-          <SubTitle variants={itemVariants}>Yo soy</SubTitle>
-          <ContainerLineTitle variants={itemVariants}>
+          <SubTitle>Yo soy</SubTitle>
+          <ContainerLineTitle>
             <LetterComponent top='-60px'></LetterComponent>
             <Title>
               {"STEFANIA".split("").map((letter, index) => (
@@ -132,12 +91,8 @@ function Start() {
           </ContainerLineTitle>
           <AnimatedText/>
         </ContainerName>
-        <ContainerIconsBtn variants={itemVariants}>
-          <motion.div
-            variants={buttonVariants}
-            whileHover="hover"
-            whileTap="tap"
-          >
+        <ContainerIconsBtn>
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <DownloadButton onClick={handleDownload}>
               {downloaded ? (
                 <>
@@ -154,19 +109,21 @@ function Start() {
             </DownloadButton>
           </motion.div>
           <ContainerIconsRedes>
-            {socialLinks.map((link, i) => (
-              <motion.a
-                key={i}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                variants={socialVariants}
-                custom={i}
-                whileHover="hover"
-              >
-                <ContainerIcon>{link.icon}</ContainerIcon>
-              </motion.a>
-            ))}
+            <motion.div whileHover={{ scale: 1.1 }}>
+              <ContainerIcon href="https://github.com/stefaniarosales" target="_blank" rel="noopener noreferrer">
+                <GitHub style={{ fontSize: '30px' }}/>
+              </ContainerIcon>
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.1 }}>
+              <ContainerIcon href="https://www.instagram.com/stefisua/" target="_blank" rel="noopener noreferrer">
+                <Instagram style={{ fontSize: '30px' }}/>
+              </ContainerIcon>
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.1 }}>
+              <ContainerIcon href="https://www.linkedin.com/in/stefaniarosales/" target="_blank" rel="noopener noreferrer">
+                <LinkedIn style={{ fontSize: '30px' }}/>
+              </ContainerIcon>
+            </motion.div>
           </ContainerIconsRedes>
         </ContainerIconsBtn>
       </motion.div>

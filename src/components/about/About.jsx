@@ -31,20 +31,11 @@ const containerVariants = {
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] },
-  },
-};
-
-const imageVariants = {
-  hidden: { opacity: 0, x: -50 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 0.8, ease: "easeOut" },
+    transition: { duration: 0.5 }
   },
 };
 
@@ -67,7 +58,7 @@ function About() {
           <Line />
         </ContainerLineTitle>
         <ContainerImgData>
-          <motion.div variants={imageVariants}>
+          <motion.div variants={itemVariants}>
             <Img src='https://res.cloudinary.com/dbotvxyzq/image/upload/v1738673390/stefania_de99fj.webp'/>
           </motion.div>
           <ContentData>
