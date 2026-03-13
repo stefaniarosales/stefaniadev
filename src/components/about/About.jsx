@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import {
   Container,
   ContainerImgData,
@@ -17,53 +16,14 @@ import {
   Line,
   Summary
 } from './aboutstyled'
+//reusable components
 import LetterComponent from '../UI/LetterComponent'
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: [0.25, 0.46, 0.45, 0.94],
-    },
-  },
-};
-
-const imageVariants = {
-  hidden: { opacity: 0, x: -50 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 0.8,
-      ease: "easeOut",
-    },
-  },
-};
 
 function About() {
   return (
-    <Container>
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-      >
-        <ContainerLineTitle variants={itemVariants}>
+    <>
+      <Container>
+        <ContainerLineTitle>
           <LetterComponent top='-65px'>A</LetterComponent>
           <Title>
             {"ABOUT".split("").map((letter, index) => (
@@ -73,19 +33,17 @@ function About() {
           <Line />
         </ContainerLineTitle>
         <ContainerImgData>
-          <motion.div variants={imageVariants}>
-            <Img src='https://res.cloudinary.com/dbotvxyzq/image/upload/v1738673390/stefania_de99fj.webp'/>
-          </motion.div>
+          <Img src='https://res.cloudinary.com/dbotvxyzq/image/upload/v1738673390/stefania_de99fj.webp'/>
           <ContentData>
-            <ContainerNameLastName variants={itemVariants}>
+            <ContainerNameLastName>
               <Name>NOMBRE:</Name><NameLastName>STEFANIA ROSALES</NameLastName>
             </ContainerNameLastName>
-            <Profession variants={itemVariants}>developer frontend</Profession>
-            <ContainerData variants={itemVariants}>
+            <Profession>developer frontend</Profession>
+            <ContainerData>
               <Data>Intereses:</Data>
               <Answer>Diseño UX/UI, lectura, aprendizaje constante de nuevas tecnologías(actualmente explorando Node.js).</Answer>
             </ContainerData>
-            <ContainerSummary variants={itemVariants}>
+            <ContainerSummary>
               <Summary>Soy una Desarrolladora frontend con una sólida base en HTML, CSS, JavaScript y React, apasionada
               por crear interfaces de usuario intuitivas y visualmente atractivas.</Summary>
               <Summary>Busco mi primera oportunidad profesional para aplicar mis conocimientos y contribuir en
@@ -96,8 +54,8 @@ function About() {
             </ContainerSummary>
           </ContentData>
         </ContainerImgData>
-      </motion.div>
-    </Container>
+      </Container>
+    </>
   )
 }
 
