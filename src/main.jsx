@@ -8,7 +8,7 @@ import { GlobalStyled } from './components/globalstyled/globalstyled.js'
 createRoot(document.getElementById('root')).render(
   <>
     <GlobalStyled/>
-    <BrowserRouter>
+    <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <App/>
     </BrowserRouter>
   </>,
