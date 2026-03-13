@@ -15,9 +15,7 @@ import {
   ProgressBar,
   ContainerSpeechBubble, 
   ContainerIconsBtn, 
-  ContainerIconsRedes,
-  ScrollIndicator,
-  ScrollArrow
+  ContainerIconsRedes
 } from './startstyled';
 import LetterComponent from '../UI/LetterComponent';
 import SpeechBubble from './SpeechBubble';
@@ -73,10 +71,6 @@ function Start() {
     }, 100);
   };
 
-  const scrollToNextSection = () => {
-    navigate('/About');
-  };
-
   return (
     <Container>
       <motion.div
@@ -116,51 +110,53 @@ function Start() {
               </Description>
             </motion.div>
             
-            <ContainerIconsBtn>
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <DownloadButton onClick={handleDownload}>
-                  {downloaded ? (
-                    <>
-                      <CheckCircleIcon style={{ marginRight: '8px' }} />
-                      Descargado
-                    </>
-                  ) : (
-                    <>
-                      <Download style={{ marginRight: '8px' }} />
-                      Descargar CV
-                    </>
-                  )}
-                  <ProgressBar progress={progress} />
-                </DownloadButton>
-              </motion.div>
+            <ContainerIconsBtn style={{ flexDirection: 'column', gap: '1.5rem' }}>
+              <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center' }}>
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <DownloadButton onClick={handleDownload}>
+                    {downloaded ? (
+                      <>
+                        <CheckCircleIcon style={{ marginRight: '8px' }} />
+                        Descargado
+                      </>
+                    ) : (
+                      <>
+                        <Download style={{ marginRight: '8px' }} />
+                        Descargar CV
+                      </>
+                    )}
+                    <ProgressBar progress={progress} />
+                  </DownloadButton>
+                </motion.div>
+                
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <SecondaryButton onClick={() => navigate('/Projects')}>
+                    <ArrowForward style={{ marginRight: '8px' }} />
+                    Ver Proyectos
+                  </SecondaryButton>
+                </motion.div>
+              </div>
               
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <SecondaryButton onClick={() => navigate('/Projects')}>
-                  <ArrowForward style={{ marginRight: '8px' }} />
-                  Ver Proyectos
-                </SecondaryButton>
+              <motion.div variants={itemVariants}>
+                <ContainerIconsRedes>
+                  <motion.div whileHover={{ scale: 1.1 }}>
+                    <ContainerIcon href="https://github.com/stefaniarosales" target="_blank" rel="noopener noreferrer">
+                      <GitHub style={{ fontSize: '30px' }}/>
+                    </ContainerIcon>
+                  </motion.div>
+                  <motion.div whileHover={{ scale: 1.1 }}>
+                    <ContainerIcon href="https://www.instagram.com/stefisua/" target="_blank" rel="noopener noreferrer">
+                      <Instagram style={{ fontSize: '30px' }}/>
+                    </ContainerIcon>
+                  </motion.div>
+                  <motion.div whileHover={{ scale: 1.1 }}>
+                    <ContainerIcon href="https://www.linkedin.com/in/stefaniarosales/" target="_blank" rel="noopener noreferrer">
+                      <LinkedIn style={{ fontSize: '30px' }}/>
+                    </ContainerIcon>
+                  </motion.div>
+                </ContainerIconsRedes>
               </motion.div>
             </ContainerIconsBtn>
-            
-            <motion.div variants={itemVariants}>
-              <ContainerIconsRedes>
-                <motion.div whileHover={{ scale: 1.1 }}>
-                  <ContainerIcon href="https://github.com/stefaniarosales" target="_blank" rel="noopener noreferrer">
-                    <GitHub style={{ fontSize: '30px' }}/>
-                  </ContainerIcon>
-                </motion.div>
-                <motion.div whileHover={{ scale: 1.1 }}>
-                  <ContainerIcon href="https://www.instagram.com/stefisua/" target="_blank" rel="noopener noreferrer">
-                    <Instagram style={{ fontSize: '30px' }}/>
-                  </ContainerIcon>
-                </motion.div>
-                <motion.div whileHover={{ scale: 1.1 }}>
-                  <ContainerIcon href="https://www.linkedin.com/in/stefaniarosales/" target="_blank" rel="noopener noreferrer">
-                    <LinkedIn style={{ fontSize: '30px' }}/>
-                  </ContainerIcon>
-                </motion.div>
-              </ContainerIconsRedes>
-            </motion.div>
           </HeroText>
           
           <HeroImage variants={itemVariants}>
@@ -170,11 +166,6 @@ function Start() {
             />
           </HeroImage>
         </HeroContent>
-        
-        <ScrollIndicator onClick={scrollToNextSection}>
-          <span>Scroll</span>
-          <ScrollArrow />
-        </ScrollIndicator>
       </motion.div>
     </Container>
   );
