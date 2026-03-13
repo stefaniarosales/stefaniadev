@@ -1,22 +1,4 @@
-import styled, { keyframes } from "styled-components";
-
-const shimmer = keyframes`
-    0% {
-        background-position: -200% center;
-    }
-    100% {
-        background-position: 200% center;
-    }
-`;
-
-const float = keyframes`
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-5px);
-    }
-`;
+import styled from "styled-components";
 
 export const Container = styled.section`
     width: 100%;
@@ -38,16 +20,15 @@ export const ContainerName = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    animation: ${float} 3s ease-in-out infinite;
     @media (max-width: 768px) {
         width: 100%;
     }
 `
 export const SubTitle = styled.h2`
-    font-weight: 300;
+    font-weight: lighter;
     font-size: 1.7rem;
     margin: 0;
-    color: var(--text-secondary);
+    color: #B7B7B7;
     @media (max-width: 768px) {
         font-size: 3rem;
     }
@@ -56,45 +37,25 @@ export const Img = styled.img`
     width: 350px;
     height: 600px;
 `
-
+// Botón cv
 export const DownloadButton = styled.button`
   width: 25%;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 12px 24px;
-  font-weight: 600;
-  background: var(--gradient-lavanda);
-  color: var(--bg-primary);
+  padding: 10px 20px;
+  font-weight: bold;
+  background: linear-gradient(90deg, rgba(190, 149, 196, 1) 0%, rgba(159, 134, 192, 1) 41%, rgba(224, 177, 203, 1) 100%);
+  color: rgb(231, 229, 229);
   border: none;
-  border-radius: 12px;
+  border-radius: 25px;
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  transition: all 0.3s ease;
-  box-shadow: var(--glow-lavanda);
-  
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255, 255, 255, 0.4),
-        transparent
-    );
-    background-size: 200% 100%;
-    animation: ${shimmer} 2s infinite;
-  }
-  
+  transition: 0.3s ease, transform 0.2s ease;
   &:hover {
     transform: scale(1.05);
-    box-shadow: var(--glow-lavanda-strong);
   }
   &:active {
     transform: scale(0.95);
@@ -129,11 +90,9 @@ export const ContainerIconsBtn = styled.div`
     gap: 0.9rem;
   }
 `
-
+//SpeechBubble
 export const ContainerSpeechBubble = styled.div`
   margin-left: 200px;
   padding: 10px;
   text-align: center;
-  animation: ${float} 2.5s ease-in-out infinite;
-  animation-delay: 0.5s;
 `

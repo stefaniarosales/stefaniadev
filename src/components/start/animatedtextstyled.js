@@ -4,15 +4,11 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--lavanda-light);
+  color: #E0B1CB;
   font-size: 1.1rem;
-  font-weight: 400;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  
+  letter-spacing: 1px;
   @media (max-width: 768px) {
-        font-size: 1rem;
-        letter-spacing: 2px;
+        font-size: 1.3rem;
     }
   div {
     display: inline-block;

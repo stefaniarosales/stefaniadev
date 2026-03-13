@@ -1,15 +1,4 @@
-import styled, { keyframes } from 'styled-components';
-
-const fadeIn = keyframes`
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-`;
+import styled from 'styled-components';
 
 export const Container = styled.section`
     width: 100%;
@@ -17,7 +6,7 @@ export const Container = styled.section`
     display: flex;
     justify-content: center;
     flex-direction: column;
-    max-width: 1050px;
+    max-width: 1050px;;
     @media (max-width: 768px) {
         padding: 50px 0 0 0;
         justify-content: flex-start;
@@ -26,8 +15,8 @@ export const Container = styled.section`
 
 export const ProjectsContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
   padding: 1rem;
   justify-content: center;
   align-items: center;
@@ -36,29 +25,19 @@ export const ProjectsContainer = styled.div`
 export const ProjectCard = styled.div`
   position: relative;
   overflow: hidden;
-  border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  animation: ${fadeIn} 0.6s ease forwards;
-  background: var(--bg-card);
-  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 
   &:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: var(--glow-lavanda-strong);
-    border-color: var(--lavanda-dark);
+    transform: scale(1.05);
   }
 `;
 
 export const ProjectImage = styled.img`
   width: 100%;
-  height: 200px;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-  
-  ${ProjectCard}:hover & {
-    transform: scale(1.1);
-  }
+  height: auto;
+  display: block;
 `;
 
 export const Overlay = styled.div`
@@ -67,8 +46,7 @@ export const Overlay = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(13, 13, 18, 0.85);
-  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.7);
   color: white;
   display: flex;
   flex-direction: column;
@@ -76,76 +54,53 @@ export const Overlay = styled.div`
   justify-content: center;
   opacity: 0;
   transition: opacity 0.3s ease;
-  padding: 1rem;
 
   ${ProjectCard}:hover & {
     opacity: 1;
-  }
-  
-  h3 {
-    font-family: var(--font-display);
-    margin: 0 0 0.5rem 0;
-    font-size: 1.5rem;
-    background: var(--gradient-lavanda);
-    background-clip: text;
-    color: transparent;
   }
 `;
 
 export const Technologies = styled.div`
   display: flex;
-  gap: 8px;
+  gap: 10px;
   margin: 10px 0;
-  flex-wrap: wrap;
-  justify-content: center;
 `;
 
 export const TechIcon = styled.img`
-  width: 28px;
-  height: 28px;
-  transition: transform 0.3s ease;
-  
-  &:hover {
-    transform: scale(1.2);
-  }
+  width: 30px;
+  height: 30px;
 `;
 
 export const ButtonContainer = styled.div`
   display: flex;
-  gap: 16px;
-  margin-top: 0.5rem;
+  gap: 20px;
 `;
 
 export const Button = styled.a`
+  width: 55%;
+  height: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 8px;
   padding: 10px 20px;
-  font-weight: 600;
-  font-size: 14px;
-  background: transparent;
-  color: var(--lavanda-light);
-  border: 2px solid var(--lavanda-dark);
-  border-radius: 8px;
+  font-weight: bold;
+  background: linear-gradient(90deg, rgba(190, 149, 196, 1) 0%, rgba(159, 134, 192, 1) 41%, rgba(224, 177, 203, 1) 100%);
+  color: rgb(231, 229, 229);
+  border: none;
+  border-radius: 10px;
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  transition: all 0.3s ease;
-  
+  transition: 0.3s ease, transform 0.2s ease;
   &:hover {
-    background: var(--gradient-lavanda);
-    color: var(--bg-primary);
-    box-shadow: var(--glow-lavanda);
     transform: scale(1.05);
   }
-  
   &:active {
     transform: scale(0.95);
   }
-  
   @media (max-width: 768px) {
-    padding: 8px 16px;
-    font-size: 12px;
+    width: 60%;
+    font-size: 1rem;
   }
 `;
