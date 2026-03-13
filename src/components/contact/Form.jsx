@@ -2,6 +2,7 @@ import React from 'react'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import emailjs from '@emailjs/browser'
+import Swal from 'sweetalert2'
 
 import {
     FormContainer,
@@ -35,18 +36,28 @@ function Form() {
         onSubmit: (values, {resetForm}) => {
             emailjs
                 .send(
-                    "stefaniadev", //Service ID
-                    "template_jczyqlc", //Template ID
+                    import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                    import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
                     values,
-                    "0Wh_eLOE5DQz1KVoo"  //Public Key
+                    import.meta.env.VITE_EMAILJS_PUBLIC_KEY
                 )
                 .then(
                     (response) => {
-                        alert("¡Formulario enviado con éxito!");
+                        Swal.fire({
+                            icon: 'success',
+                            title: '¡Éxito!',
+                            text: 'Formulario enviado con éxito',
+                            confirmButtonColor: '#3085d6',
+                        });
                         resetForm();
                     },
                     (error) => {
-                        alert("Hubo un error al enviar el formulario. Intenta nuevamente.");
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Error',
+                            text: 'Hubo un error al enviar el formulario. Intenta nuevamente.',
+                            confirmButtonColor: '#3085d6',
+                        });
                     }
                 )
         },

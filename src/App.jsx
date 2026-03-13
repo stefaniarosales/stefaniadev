@@ -4,11 +4,6 @@ import About from "./components/about/About"
 import Skills from "./components/skills/Skills"
 import Projects from "./components/projects/Projects"
 import Contact from "./components/contact/Contact"
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
-import HorizontalScroll from "./components/UI/HorizontalScroll"
-
 
 import {Routes,Route} from "react-router-dom"
 import { ContainerGeneral } from "./components/globalstyled/globalstyled"
@@ -25,8 +20,6 @@ function App() {
           <Route path="/Skills" element={<Skills/>}/>
           <Route path="/Projects" element={<Projects/>}/>
           <Route path="/Contact" element={<Contact/>}/>
-          <Route/>
-          <Route/>
         </Routes>
       </ContainerGeneral>
     </>

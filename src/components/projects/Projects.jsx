@@ -1,4 +1,3 @@
-import React from 'react';
 import projectsData from '../data/projects.js';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import WebIcon from '@mui/icons-material/Web';

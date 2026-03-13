@@ -25,7 +25,7 @@ function Start() {
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '../cv/stefaniadev-cv.pdf';
+    link.href = '/cv/stefaniadev-cv.pdf';
     link.download = 'stefaniadev-cv.pdf';
     link.click();
 
