@@ -228,7 +228,9 @@ export const ProgressBar = styled.div`
 export const ContainerIconsRedes = styled.div`
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
+    width: 100%;
 `;
 
 export const ContainerIconsBtn = styled.div`
